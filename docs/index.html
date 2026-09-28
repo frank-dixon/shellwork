@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" data-depth="simple">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shellwork — a laying-hen egg flip-zine</title>
+  <meta name="description" content="An interactive flip-zine about laying-hen egg color, shape, and size. Cited poultry science in full sentences.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/shellwork.css">
+</head>
+<body class="min-h-screen bg-cream text-ink">
+
+  <!-- Hub header -->
+  <header class="sticky top-0 z-50 border-b border-ink/10 bg-cream/90 backdrop-blur-sm">
+    <div class="mx-auto flex max-w-5xl items-center justify-between gap-3 px-4 py-3 sm:px-6">
+      <div class="flex items-baseline gap-3">
+        <a href="https://frank-dixon.github.io/" class="text-xs font-semibold uppercase tracking-[0.22em] text-ink-mute no-underline hover:text-terra">Hub</a>
+        <span class="text-ink/20" aria-hidden="true">/</span>
+        <span class="font-display text-lg tracking-wide text-ink">Shellwork</span>
+      </div>
+      <nav class="flex items-center gap-2" aria-label="Depth and source">
+        <div class="flex rounded-full border border-ink/15 bg-cream-paper p-0.5" role="group" aria-label="Reading depth">
+          <button type="button" data-depth="simple" aria-pressed="true"
+            class="depth-btn rounded-full px-3 py-1 text-xs font-semibold tracking-wide text-ink-mute hover:text-ink is-active:bg-ink is-active:text-cream [&amp;.is-active]:bg-ink [&amp;.is-active]:text-cream">Simple</button>
+          <button type="button" data-depth="advanced" aria-pressed="false"
+            class="depth-btn rounded-full px-3 py-1 text-xs font-semibold tracking-wide text-ink-mute hover:text-ink [&amp;.is-active]:bg-ink [&amp;.is-active]:text-cream">Advanced</button>
+        </div>
+        <a href="https://github.com/frank-dixon/shellwork" target="_blank" rel="noopener"
+          class="hidden text-xs font-semibold tracking-wide text-ink-mute no-underline hover:text-terra sm:inline">Source</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-5xl px-4 py-8 sm:px-6 sm:py-12">
+    <p class="mb-6 max-w-2xl text-sm leading-relaxed text-ink-mute">
+      Drag the page edge, use the arrows, or press ← →. This Phase 1 issue covers egg color, shape, and size only — the breeding calculator stays parked.
+    </p>
+
+    <!-- Book stage -->
+    <div class="book-stage relative mx-auto w-full max-w-3xl" id="book-stage">
+      <div id="book" class="relative mx-auto aspect-[4/3] w-full select-none rounded-sm bg-cream-deep shadow-page"
+        style="transform-style: preserve-3d;"
+        role="region" aria-label="Shellwork flip-zine">
+
+        <!-- Base / last spread (Sources) — always at the bottom -->
+        <section class="absolute inset-0 flex flex-col justify-between overflow-hidden rounded-sm bg-cream-paper p-6 sm:p-10"
+          aria-label="Sources">
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-[0.2em] text-terra">Issue 01 · Sources</p>
+            <h2 class="mt-2 font-display text-3xl text-ink sm:text-4xl">Where the claims come from</h2>
+            <ul class="mt-6 space-y-3 text-sm leading-relaxed text-ink-soft">
+              <li>Samiullah, S., Roberts, J. R., &amp; Chousalkar, K. (2015). Eggshell color in brown-egg laying hens — a review. <em>World’s Poultry Science Journal</em>, 71(4).</li>
+              <li>Lang, M. R., &amp; Wells, J. W. (1981). Anatomical and physiological aspects of egg shell formation. Extension and review literature summarize protoporphyrin and biliverdin deposition in the shell gland.</li>
+              <li>USDA Agricultural Marketing Service. United States standards for quality of shell eggs — size classes by minimum net weight per dozen.</li>
+              <li>Romanoff, A. L., &amp; Romanoff, A. J. (1949). <em>The Avian Egg</em>. Wiley — classic reference for shape index and shell morphometrics.</li>
+              <li>University extension summaries (e.g. Penn State, Mississippi State) on blue-egg breeds and the oocyan / biliverdin pigment pathway.</li>
+            </ul>
+          </div>
+          <p class="text-xs text-ink-mute">Phase 1 deliberately stops before breed-crossing math. Color, shape, and size are traits you can read on the shell.</p>
+        </section>
+
+        <!-- Leaf 3: Size (front) / Sources teaser back handled by base -->
+        <div class="book-leaf absolute inset-0" data-leaf="cover" style="z-index: 6;">
+          <div class="leaf-face absolute inset-0 flex flex-col justify-between overflow-hidden rounded-sm bg-ink p-6 text-cream shadow-leaf sm:p-10">
+            <div>
+              <p class="text-xs font-semibold uppercase tracking-[0.28em] text-terra-soft">Flip-zine · Phase 1</p>
+              <h1 class="mt-4 font-display text-5xl leading-none tracking-wide text-cream sm:text-6xl">Shellwork</h1>
+              <p class="mt-4 max-w-md text-lg leading-relaxed text-cream/75">
+                A small digital magazine about reading laying-hen eggs — color, shape, and size — with a page-turn you can feel.
+              </p>
+            </div>
+            <div class="flex items-end justify-between gap-4">
+              <p class="text-sm text-cream/55">Drag the right edge · or press →</p>
+              <div class="egg-shell h-16 w-12 bg-gradient-to-br from-[#c9956a] to-[#8a5330] opacity-90" aria-hidden="true"></div>
+            </div>
+          </div>
+          <div class="leaf-back leaf-face absolute inset-0 overflow-hidden rounded-sm bg-cream-deep p-6 sm:p-10">
+            <p class="text-xs font-semibold uppercase tracking-[0.2em] text-terra">Inside</p>
+            <h2 class="mt-2 font-display text-3xl text-ink">Color first</h2>
+            <p class="mt-4 text-base leading-relaxed text-ink-soft">Open the next leaf for pigments, swatches, and the Simple / Advanced toggle in the header.</p>
+          </div>
+        </div>
+        <div class="book-leaf absolute inset-0" data-leaf="0" style="z-index: 5;">
+          <div class="leaf-face absolute inset-0 overflow-hidden rounded-sm bg-cream-paper p-6 shadow-leaf sm:p-10">
+            <p class="text-xs font-semibold uppercase tracking-[0.2em] text-terra">Color</p>
+            <h2 class="mt-2 font-display text-3xl text-ink sm:text-4xl">Pigment on the shell</h2>
+            <p class="simple mt-4 max-w-prose text-base leading-relaxed text-ink-soft" data-depth-block="simple">
+              Egg color lives in the shell, not the yolk diet myth. Brown eggs wear a pigment called protoporphyrin. Blue-green eggs carry biliverdin (sometimes called oocyan). Layer both and you get olive tones.
+            </p>
+            <p class="advanced mt-4 hidden max-w-prose text-base leading-relaxed text-ink-soft" data-depth-block="advanced">
+              In the shell gland, brown-egg layers deposit protoporphyrin IX onto the cuticle and outer shell late in formation. Blue-egg breeds produce biliverdin that tints the shell matrix earlier, so the blue reads through the whole thickness. When a hen carries both pathways, brown over blue yields green or olive shells. White eggs simply lack those deposits — the calcium carbonate shows through.
+            </p>
+            <div class="mt-8 flex flex-col items-center gap-5 sm:flex-row sm:items-end sm:justify-between">
+              <div id="demo-egg" class="egg-shell egg-speckle h-36 w-28 shrink-0 transition-all duration-300"
+                style="background: linear-gradient(145deg, #c9956a 0%, #a86d42 50%, #8a5330 100%);"
+                aria-hidden="true"></div>
+              <div class="flex flex-wrap gap-2" role="group" aria-label="Egg color swatches">
+                <button type="button" data-egg-color="white" class="h-10 w-10 rounded-full border border-ink/15 bg-[#f8f4ee] ring-offset-2 ring-offset-cream-paper" title="White" aria-label="White egg"></button>
+                <button type="button" data-egg-color="tint" class="h-10 w-10 rounded-full border border-ink/15 bg-[#efd4a4] ring-offset-2 ring-offset-cream-paper" title="Tinted" aria-label="Tinted egg"></button>
+                <button type="button" data-egg-color="brown" class="h-10 w-10 rounded-full border border-ink/15 bg-[#a86d42] ring-2 ring-terra ring-offset-2 ring-offset-cream-paper" title="Brown" aria-label="Brown egg" aria-pressed="true"></button>
+                <button type="button" data-egg-color="blue" class="h-10 w-10 rounded-full border border-ink/15 bg-[#7fb0b6] ring-offset-2 ring-offset-cream-paper" title="Blue-green" aria-label="Blue-green egg"></button>
+                <button type="button" data-egg-color="olive" class="h-10 w-10 rounded-full border border-ink/15 bg-[#6f7f45] ring-offset-2 ring-offset-cream-paper" title="Olive" aria-label="Olive egg"></button>
+              </div>
+            </div>
+          </div>
+          <div class="leaf-back leaf-face absolute inset-0 overflow-hidden rounded-sm bg-cream-deep p-6 sm:p-10">
+            <p class="text-xs font-semibold uppercase tracking-[0.2em] text-terra">Coming up</p>
+            <h2 class="mt-2 font-display text-3xl text-ink">Shape of the shell</h2>
+            <p class="mt-4 text-base leading-relaxed text-ink-soft">The next leaf looks at roundness, elongation, and what everyday shape scatter does — and does not — tell you.</p>
+          </div>
+        </div>
+        <div class="book-leaf absolute inset-0" data-leaf="1" style="z-index: 4;">
+          <div class="leaf-face absolute inset-0 overflow-hidden rounded-sm bg-cream-paper p-6 shadow-leaf sm:p-10">
+            <p class="text-xs font-semibold uppercase tracking-[0.2em] text-terra">Shape</p>
+            <h2 class="mt-2 font-display text-3xl text-ink sm:text-4xl">Round, classic, pointed</h2>
+            <p class="simple mt-4 max-w-prose text-base leading-relaxed text-ink-soft" data-depth-block="simple">
+              Most eggs are gently oval: a blunter end and a slightly sharper tip. Shape varies by hen and breed. Sudden runs of odd shapes can flag stress or health issues, but everyday variation is normal.
+            </p>
+            <p class="advanced mt-4 hidden max-w-prose text-base leading-relaxed text-ink-soft" data-depth-block="advanced">
+              Poultry scientists often summarize shape with a shape index (width divided by length, times 100). Values near the mid-70s describe a classic table egg; lower numbers read more elongated. The shell gland and membranes set that silhouette hours before lay. Extreme misshapes deserve a flock check; mild scatter does not.
+            </p>
+            <div class="mt-8 flex flex-col items-center gap-4">
+              <div class="flex h-44 items-center justify-center">
+                <div id="shape-egg" class="egg-shell h-36 w-28 bg-gradient-to-br from-[#fffef9] to-[#e7dfd2] transition-transform duration-200" aria-hidden="true"></div>
+              </div>
+              <label class="w-full max-w-sm text-center text-sm text-ink-soft">
+                <span class="mb-2 block font-semibold text-ink">Morph the silhouette</span>
+                <span class="mb-2 flex justify-between text-xs text-ink-mute"><span>Rounder</span><span>More elongated</span></span>
+                <input id="shape-range" type="range" min="0" max="100" value="35" class="w-full accent-terra">
+              </label>
+            </div>
+          </div>
+          <div class="leaf-back leaf-face absolute inset-0 overflow-hidden rounded-sm bg-cream-deep p-6 sm:p-10">
+            <p class="text-xs font-semibold uppercase tracking-[0.2em] text-terra">Coming up</p>
+            <h2 class="mt-2 font-display text-3xl text-ink">Size on the carton</h2>
+            <p class="mt-4 text-base leading-relaxed text-ink-soft">Next spread walks USDA weight classes and how age and breed nudge egg weight — without turning into a breeding tool.</p>
+          </div>
+        </div>
+        <div class="book-leaf absolute inset-0" data-leaf="2" style="z-index: 3;">
+          <div class="leaf-face absolute inset-0 overflow-hidden rounded-sm bg-cream-paper p-6 shadow-leaf sm:p-10">
+            <p class="text-xs font-semibold uppercase tracking-[0.2em] text-terra">Size</p>
+            <h2 class="mt-2 font-display text-3xl text-ink sm:text-4xl">Weight classes you can feel</h2>
+            <p class="simple mt-4 max-w-prose text-base leading-relaxed text-ink-soft" data-depth-block="simple">
+              Grocery cartons sort eggs by weight per dozen. A Large egg is about two ounces. Younger hens usually start smaller; many breeds settle into Medium or Large as the flock matures.
+            </p>
+            <p class="advanced mt-4 hidden max-w-prose text-base leading-relaxed text-ink-soft [[html[data-depth=advanced]_&amp;]]:block" data-depth-block="advanced">
+              USDA size names (Peewee through Jumbo) are minimum net weights per dozen, not breed names. Egg weight rises with hen age and body weight, and it responds to nutrition and lighting — so size is a flock-management signal as much as a genetic one. This issue does not predict cross outcomes; it only maps what the carton already claims.
+            </p>
+            <div class="mt-8 flex flex-col items-center gap-4">
+              <div class="flex h-40 w-full items-center justify-center">
+                <div id="size-egg" class="egg-shell h-28 w-20 bg-gradient-to-br from-[#f7e7c8] to-[#e2c08a] transition-transform duration-300" aria-hidden="true"></div>
+              </div>
+              <label class="w-full max-w-sm text-center text-sm text-ink-soft">
+                <span id="size-caption" class="mb-2 block font-semibold text-ink">Medium · about 1.75 oz (50 g)</span>
+                <input id="size-range" type="range" min="0" max="100" value="50" class="w-full accent-terra" aria-valuetext="Egg size">
+              </label>
+            </div>
+          </div>
+          <div class="leaf-back leaf-face absolute inset-0 overflow-hidden rounded-sm bg-teal-mist p-6 sm:p-10">
+            <p class="text-xs font-semibold uppercase tracking-[0.2em] text-teal">Next</p>
+            <h2 class="mt-2 font-display text-3xl text-ink">Sources &amp; citations</h2>
+            <p class="mt-4 text-base leading-relaxed text-ink-soft">Flip once more for the bibliography that backs the pigment, shape, and size claims in this issue.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="mt-6 flex items-center justify-center gap-4">
+      <button type="button" id="btn-prev" class="rounded-full border border-ink/20 bg-cream-paper px-4 py-2 text-sm font-semibold text-ink hover:border-terra hover:text-terra disabled:cursor-not-allowed disabled:opacity-40" aria-label="Previous page">← Prev</button>
+      <span id="page-label" class="min-w-[7rem] text-center text-xs font-semibold uppercase tracking-[0.18em] text-ink-mute">Page 1 of 5</span>
+      <button type="button" id="btn-next" class="rounded-full border border-ink/20 bg-cream-paper px-4 py-2 text-sm font-semibold text-ink hover:border-terra hover:text-terra disabled:cursor-not-allowed disabled:opacity-40" aria-label="Next page">Next →</button>
+    </div>
+  </main>
+
+  <style>
+    /* Depth toggle visibility — keep out of Tailwind purge edge cases */
+    html[data-depth="simple"] [data-depth-block="advanced"] { display: none !important; }
+    html[data-depth="simple"] [data-depth-block="simple"] { display: block; }
+    html[data-depth="advanced"] [data-depth-block="simple"] { display: none !important; }
+    html[data-depth="advanced"] [data-depth-block="advanced"] { display: block; }
+    .depth-btn.is-active { background: #1c1916; color: #f6f0e6; }
+  </style>
+  <script src="js/zine.js" defer></script>
+</body>
+</html>
