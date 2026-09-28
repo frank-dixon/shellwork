@@ -1,8 +1,8 @@
 {
   "name": "shellwork",
   "private": true,
-  "version": "0.1.0",
-  "description": "Shellwork — laying-hen egg flip-zine (Tailwind + minified JS)",
+  "version": "0.2.0",
+  "description": "Shellwork — immersive hen↔egg journey (Tailwind + minified JS)",
   "scripts": {
     "build:css": "tailwindcss -i ./src/input.css -o ./docs/css/shellwork.css --minify",
     "build:js": "node scripts/build-js.js",

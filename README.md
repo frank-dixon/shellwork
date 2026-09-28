@@ -1,6 +1,6 @@
 # Shellwork
 
-A laying-hen egg **flip-zine** — Phase 1 covers shell **color**, **shape**, and **size** only (no breeding calculator).
+An immersive full-viewport **hen↔egg journey** — Phase 1 covers shell **color**, **shape**, and **size** only (no breeding calculator). Continuous ambient motion, parallax layers, and soft scene transitions; cream UI with turquoise accent.
 
 Hub: [frank-dixon.github.io](https://frank-dixon.github.io/)
 
@@ -14,7 +14,7 @@ npm run watch   # or: npm start
 One watcher does both:
 
 - **Tailwind** — `src/input.css` → `docs/css/shellwork.css`
-- **JS minify** — commented `src/js/zine.js` → `docs/js/zine.js`
+- **JS minify** — commented `src/js/experience.js` → `docs/js/experience.js`
 
 Open `docs/index.html` (or serve `docs/`). Prefer Tailwind utilities in HTML.
 

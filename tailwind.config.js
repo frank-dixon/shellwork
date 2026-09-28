@@ -1,4 +1,4 @@
-/** Shellwork — cream shell / ink / terracotta */
+/** Shellwork — cream shell / ink / turquoise accent */
 module.exports = {
   content: ["./docs/**/*.{html,js}", "./src/js/**/*.js"],
   theme: {
@@ -20,8 +20,8 @@ module.exports = {
           soft: "#e8a08c",
         },
         teal: {
-          DEFAULT: "#2f6f66",
-          bright: "#3d9e8f",
+          DEFAULT: "#0B8A8F",
+          bright: "#12a8ae",
           mist: "#d5ebe6",
         },
       },
@@ -30,11 +30,27 @@ module.exports = {
         sans: ['"Source Sans 3"', "system-ui", "sans-serif"],
       },
       boxShadow: {
-        page: "0 18px 40px rgba(28, 25, 22, 0.18)",
-        leaf: "-8px 0 24px rgba(28, 25, 22, 0.22)",
+        scene: "0 22px 48px rgba(28, 25, 22, 0.12)",
+        soft: "0 10px 28px rgba(28, 25, 22, 0.08)",
       },
-      transitionTimingFunction: {
-        flip: "cubic-bezier(0.22, 0.61, 0.36, 1)",
+      keyframes: {
+        drift: {
+          "0%, 100%": { transform: "translate3d(0, 0, 0) rotate(0deg)" },
+          "50%": { transform: "translate3d(12px, -18px, 0) rotate(4deg)" },
+        },
+        floaty: {
+          "0%, 100%": { transform: "translateY(0) scale(1)" },
+          "50%": { transform: "translateY(-22px) scale(1.04)" },
+        },
+        haze: {
+          "0%, 100%": { opacity: "0.35", transform: "translateX(0)" },
+          "50%": { opacity: "0.55", transform: "translateX(24px)" },
+        },
+      },
+      animation: {
+        drift: "drift 18s ease-in-out infinite",
+        floaty: "floaty 14s ease-in-out infinite",
+        haze: "haze 22s ease-in-out infinite",
       },
     },
   },

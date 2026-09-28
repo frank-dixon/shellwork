@@ -2,55 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Page-turn + egg visuals that need more than one utility string */
+/* Immersive scene + ambient motion beyond one-off utilities */
 @layer base {
-  html, body {
-    @apply m-0 min-h-full bg-cream text-ink font-sans antialiased;
+  html {
+    @apply m-0 scroll-smooth bg-cream text-ink font-sans antialiased;
+  }
+
+  body {
+    @apply m-0 min-h-full overflow-x-hidden bg-cream text-ink;
   }
 }
 
 @layer components {
-  .book-stage {
-    perspective: 2200px;
-    perspective-origin: 50% 45%;
-  }
-
-  .book-leaf {
-    transform-style: preserve-3d;
-    transform-origin: left center;
-    backface-visibility: hidden;
-    transition: transform 0.85s cubic-bezier(0.22, 0.61, 0.36, 1);
-  }
-
-  .book-leaf.is-flipped {
-    transform: rotateY(-180deg);
-  }
-
-  .book-leaf .leaf-face {
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-  }
-
-  .book-leaf .leaf-back {
-    transform: rotateY(180deg);
-  }
-
-  /* Soft curl hint on the free edge while turning */
-  .book-leaf::after {
-    content: "";
-    position: absolute;
-    inset: 0 auto 0 0;
-    width: 14px;
-    pointer-events: none;
-    background: linear-gradient(90deg, rgba(28, 25, 22, 0.12), transparent);
-    opacity: 0;
-    transition: opacity 0.35s ease;
-  }
-
-  .book-leaf.is-turning::after {
-    opacity: 1;
-  }
-
   .egg-shell {
     border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
     box-shadow:
@@ -68,15 +31,85 @@
     background-size: 100% 100%;
   }
 
+  /* Full-viewport scene stack */
+  .scene {
+    @apply relative flex min-h-[100svh] w-full flex-col justify-center px-4 py-24 sm:px-8 lg:px-12;
+  }
+
+  .scene-inner {
+    @apply relative z-10 mx-auto w-full max-w-5xl;
+  }
+
+  /* Parallax layer hooks driven by JS scroll progress */
+  .parallax-layer {
+    will-change: transform;
+    transform: translate3d(0, 0, 0);
+  }
+
+  /* Soft enter when a scene crosses the viewport */
+  .scene-reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .scene-reveal.is-inview {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Ambient soft shapes + particles */
+  .ambient-stage {
+    @apply pointer-events-none fixed inset-0 z-0 overflow-hidden;
+  }
+
+  .ambient-blob {
+    @apply absolute rounded-full blur-3xl;
+    background: radial-gradient(circle, rgba(11, 138, 143, 0.18) 0%, transparent 70%);
+  }
+
+  .ambient-cloud {
+    @apply absolute rounded-full blur-2xl;
+    background: radial-gradient(circle, rgba(255, 250, 243, 0.85) 0%, rgba(235, 226, 212, 0.2) 55%, transparent 70%);
+  }
+
+  .ambient-particle {
+    @apply absolute rounded-full bg-teal/25;
+    box-shadow: 0 0 12px rgba(11, 138, 143, 0.2);
+  }
+
+  .scene-nav-dot {
+    @apply h-2.5 w-2.5 rounded-full border border-ink/25 bg-cream-paper transition;
+  }
+
+  .scene-nav-dot.is-active {
+    @apply border-teal bg-teal scale-125;
+  }
+
+  .depth-btn.is-active,
+  .breed-tabs button.is-active {
+    background: #0B8A8F;
+    color: #fffaf3;
+    border-color: #0B8A8F;
+  }
+
   @media (prefers-reduced-motion: reduce) {
-    .book-leaf {
-      transition: opacity 0.35s ease, visibility 0.35s ease;
-      transform: none !important;
+    html {
+      scroll-behavior: auto;
     }
-    .book-leaf.is-flipped {
-      opacity: 0;
-      visibility: hidden;
-      pointer-events: none;
+
+    .scene-reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+
+    .ambient-blob,
+    .ambient-cloud,
+    .ambient-particle,
+    .parallax-layer {
+      animation: none !important;
+      transform: none !important;
     }
   }
 }

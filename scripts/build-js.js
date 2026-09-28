@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Minify src/js → docs/js for the static zine.
+ * Minify src/js → docs/js for the static immersive experience.
  * Run once for ship, or via watch on save.
  */
 const esbuild = require('esbuild');
@@ -10,7 +10,7 @@ const fs = require('fs');
 const root = path.join(__dirname, '..');
 const srcDir = path.join(root, 'src', 'js');
 const outDir = path.join(root, 'docs', 'js');
-const ENTRIES = ['zine.js'];
+const ENTRIES = ['experience.js'];
 
 async function buildOne(file) {
   const entry = path.join(srcDir, file);
