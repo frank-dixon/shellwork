@@ -1,8 +1,12 @@
-Photo credits (Wikimedia Commons / public domain / Unsplash-style stock used under license):
+Photo credits (Wikimedia Commons / public domain / licensed stock):
 - breed-leghorn.jpg — USDA ARS White Leghorn hen (Stephen Ausmus), public domain
 - breed-rir.jpg — Unsplash farm hen (Rhode Island Red–type), Unsplash License
 - breed-orpington.jpg — Pexels buff hen in nest, Pexels License
 - breed-araucana.jpg — Wikimedia Commons Aracuana Henne cropped (CC BY-SA)
 - breed-ameraucana.jpg — Wikimedia Commons Ameraucana (CC BY-SA / as attributed on Commons)
-- breed-olive-egger.jpg — Wikimedia Commons Gem (Easter Egger hen) (CC BY-SA)
+- breed-olive-egger.jpg — Wikimedia Commons Gem (Easter Egger hen) (CC BY-SA); also used as visual stand-in for Olive Egger card
 - breed-sussex.jpg — Pexels Columbian-pattern hen, Pexels License
+
+Breeds without a dedicated photo use an on-page CSS hen silhouette + egg color swatch
+with explicit credit text on the card. No images are hotlinked or scraped from
+Koops Coops, Murray McMurray Hatchery, or Cackle Hatchery.

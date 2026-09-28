@@ -1,42 +1,37 @@
 #!/usr/bin/env node
 /**
- * Minify src/js → docs/js for the static immersive experience.
- * Run once for ship, or via watch on save.
+ * Bundle + minify src/js/experience.js (imports breeds.js) → docs/js/experience.js
  */
 const esbuild = require('esbuild');
 const path = require('path');
 const fs = require('fs');
 
 const root = path.join(__dirname, '..');
-const srcDir = path.join(root, 'src', 'js');
+const entry = path.join(root, 'src', 'js', 'experience.js');
 const outDir = path.join(root, 'docs', 'js');
-const ENTRIES = ['experience.js'];
+const outfile = path.join(outDir, 'experience.js');
 
-async function buildOne(file) {
-  const entry = path.join(srcDir, file);
+async function build() {
   if (!fs.existsSync(entry)) {
-    console.warn('skip missing', file);
-    return;
+    console.error('missing', entry);
+    process.exit(1);
   }
   fs.mkdirSync(outDir, { recursive: true });
   await esbuild.build({
     entryPoints: [entry],
-    outfile: path.join(outDir, file),
-    bundle: false,
+    outfile,
+    bundle: true,
     minify: true,
     target: ['es2018'],
+    format: 'iife',
     legalComments: 'none',
     logLevel: 'silent',
   });
-  const kb = (fs.statSync(path.join(outDir, file)).size / 1024).toFixed(1);
-  console.log('minified', file, '→ docs/js/' + file, `(${kb} KB)`);
+  const kb = (fs.statSync(outfile).size / 1024).toFixed(1);
+  console.log('bundled experience.js → docs/js/experience.js (' + kb + ' KB)');
 }
 
-async function buildAll() {
-  for (const f of ENTRIES) await buildOne(f);
-}
-
-buildAll().catch((err) => {
+build().catch((err) => {
   console.error(err);
   process.exit(1);
 });

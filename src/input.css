@@ -93,6 +93,81 @@
     border-color: #0B8A8F;
   }
 
+.breed-filters .breed-filter-btn,
+  .breed-pick-btn {
+    @apply rounded-full border border-ink/15 bg-cream-paper text-ink-soft transition;
+  }
+
+  .breed-filter-btn {
+    @apply px-2.5 py-1 text-[0.7rem] font-semibold hover:border-teal;
+  }
+
+  .breed-filter-btn.is-active,
+  .breed-pick-btn.is-active {
+    background: #0B8A8F;
+    color: #fffaf3;
+    border-color: #0B8A8F;
+  }
+
+  .breed-pick-btn {
+    @apply flex min-w-[10.5rem] shrink-0 items-center gap-2 px-2.5 py-2 text-left text-[0.7rem] font-semibold hover:border-teal lg:min-w-0 lg:w-full;
+  }
+
+  .breed-pick-egg {
+    @apply h-6 w-4 shrink-0 rounded-full;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    box-shadow: inset -2px -3px 5px rgba(28, 25, 22, 0.18);
+  }
+
+  .breed-pick-text {
+    @apply flex min-w-0 flex-col;
+  }
+
+  .breed-pick-name {
+    @apply truncate text-ink;
+  }
+
+  .breed-pick-btn.is-active .breed-pick-name {
+    color: #fffaf3;
+  }
+
+  .breed-pick-meta {
+    @apply truncate text-[0.65rem] font-normal text-ink-mute;
+  }
+
+  .breed-pick-btn.is-active .breed-pick-meta {
+    color: rgba(255, 250, 243, 0.8);
+  }
+
+  .hen-placeholder {
+    background:
+      radial-gradient(circle at 50% 20%, rgba(11, 138, 143, 0.12), transparent 55%),
+      linear-gradient(180deg, #fffaf3 0%, #ebe2d4 100%);
+  }
+
+  .hen-silhouette {
+    width: 7.5rem;
+    height: 5.5rem;
+    background: #3d3833;
+    opacity: 0.55;
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 90'%3E%3Cellipse cx='58' cy='52' rx='34' ry='24' fill='black'/%3E%3Cellipse cx='88' cy='38' rx='16' ry='14' fill='black'/%3E%3Cpath d='M98 30c6-2 12-8 14-14-8 2-14 6-18 12z' fill='black'/%3E%3Cpath d='M30 58c-10 4-18 14-20 22h18c4-8 10-14 18-18z' fill='black'/%3E%3Cpath d='M70 70c2 8 4 14 4 18h-10c0-6-2-12-4-18z' fill='black'/%3E%3C/svg%3E");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 90'%3E%3Cellipse cx='58' cy='52' rx='34' ry='24' fill='black'/%3E%3Cellipse cx='88' cy='38' rx='16' ry='14' fill='black'/%3E%3Cpath d='M98 30c6-2 12-8 14-14-8 2-14 6-18 12z' fill='black'/%3E%3Cpath d='M30 58c-10 4-18 14-20 22h18c4-8 10-14 18-18z' fill='black'/%3E%3Cpath d='M70 70c2 8 4 14 4 18h-10c0-6-2-12-4-18z' fill='black'/%3E%3C/svg%3E");
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+  }
+
+  .sr-only {
+    @apply absolute h-px w-px overflow-hidden whitespace-nowrap;
+    clip: rect(0, 0, 0, 0);
+    border-width: 0;
+    padding: 0;
+    margin: -1px;
+  }
+
   @media (prefers-reduced-motion: reduce) {
     html {
       scroll-behavior: auto;

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Shellwork — laying-hen eggs &amp; the hens that lay them</title>
-  <meta name="description" content="Immersive journey pairing egg color, shape, and size with realistic hen breed photos, physical traits, and cited poultry science.">
+  <meta name="description" content="Immersive hen↔egg journey: searchable catalog of 30+ breeds with egg color, size, hen traits, and cited hatchery sources.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
@@ -50,7 +50,7 @@
         <p class="text-xs font-semibold uppercase tracking-[0.28em] text-teal">Immersive journey · Phase 1</p>
         <h1 class="mt-4 font-display text-5xl leading-none tracking-wide text-ink sm:text-7xl">Shellwork</h1>
         <p class="mt-6 max-w-xl text-lg leading-relaxed text-ink-soft sm:text-xl">
-          Move through color, shape, and size — each egg story paired with a real hen photo and the traits you can see: comb, wattles, plumage, body, and legs.
+          Move through color, shape, and size — dozens of hen breeds searchable by egg-color family, each paired with shell traits you can see: comb, wattles, plumage, body, and legs.
         </p>
         <p class="simple mt-4 max-w-xl text-base leading-relaxed text-ink-soft" data-depth-block="simple">
           Scroll or use the dots on the right to travel scene by scene. Soft ambient motion keeps the space alive while you read.
@@ -72,147 +72,27 @@
         <p class="text-xs font-semibold uppercase tracking-[0.2em] text-teal">Color</p>
         <h2 class="mt-1 font-display text-3xl text-ink sm:text-4xl">Egg + hen, paired</h2>
         <p class="simple mt-3 max-w-3xl text-base leading-relaxed text-ink-soft" data-depth-block="simple">
-          Shell color comes from the hen, not from what she ate that week. Pick a breed tab to see her photo, comb and plumage, body type, legs, and the egg she is known for — white, tinted, brown, blue, or olive.
+          Shell color comes from the hen, not from what she ate that week. Search or filter by egg-color family, then pick a breed to see her traits beside the egg she is known for — white, tinted, brown, dark chocolate, blue, or olive.
         </p>
         <p class="advanced mt-3 hidden max-w-3xl text-base leading-relaxed text-ink-soft" data-depth-block="advanced">
-          Brown shells wear protoporphyrin IX deposited late in the shell gland onto the outer shell and cuticle. Blue-green shells carry biliverdin (oocyan) earlier in the matrix, so the tint shows through the full thickness. Layer brown over blue and you get olive. White eggs simply lack those pigments — calcium carbonate shows through. Breed traits below (comb type, earlobes, muffs, shank color) help you recognize the bird that owns each pigment story.
+          Brown shells wear protoporphyrin IX deposited late in the shell gland onto the outer shell and cuticle. Blue-green shells carry biliverdin (oocyan) earlier in the matrix, so the tint shows through the full thickness. Layer brown over blue and you get olive. White eggs simply lack those pigments — calcium carbonate shows through. Breed notes cite Koops Coops, Murray McMurray Hatchery, and Cackle Hatchery (Gail Damerow) with live outbound links.
         </p>
 
-        <div class="breed-tabs mt-6 flex flex-wrap gap-1.5" role="tablist" aria-label="Hen breeds by egg color">
-          <button type="button" data-breed="leghorn" class="rounded-full border border-ink/15 bg-cream-paper px-2.5 py-1 text-[0.7rem] font-semibold text-ink-soft hover:border-teal">White · Leghorn</button>
-          <button type="button" data-breed="orpington" class="rounded-full border border-ink/15 bg-cream-paper px-2.5 py-1 text-[0.7rem] font-semibold text-ink-soft hover:border-teal">Tint · Orpington</button>
-          <button type="button" data-breed="rir" class="rounded-full border border-ink/15 bg-cream-paper px-2.5 py-1 text-[0.7rem] font-semibold text-ink-soft hover:border-teal is-active">Brown · RIR</button>
-          <button type="button" data-breed="ameraucana" class="rounded-full border border-ink/15 bg-cream-paper px-2.5 py-1 text-[0.7rem] font-semibold text-ink-soft hover:border-teal">Blue · Ameraucana</button>
-          <button type="button" data-breed="olive" class="rounded-full border border-ink/15 bg-cream-paper px-2.5 py-1 text-[0.7rem] font-semibold text-ink-soft hover:border-teal">Olive · Egger</button>
+        <div class="mt-5 flex flex-col gap-3">
+          <label class="block w-full max-w-xl">
+            <span class="sr-only">Search breeds</span>
+            <input id="breed-search" type="search" placeholder="Search breed, egg color, size…" autocomplete="off" class="w-full rounded-full border border-ink/15 bg-cream-paper px-4 py-2.5 text-sm text-ink shadow-soft placeholder:text-ink-mute focus:border-teal focus:outline-none focus:ring-2 focus:ring-teal/30" />
+          </label>
+          <div id="breed-filters" class="breed-filters flex flex-wrap gap-1.5" role="group" aria-label="Filter by egg color family"></div>
+          <p id="breed-count" class="text-xs font-semibold uppercase tracking-wider text-ink-mute">—</p>
         </div>
 
-        <div class="relative mt-6">
-
-          <!-- LEGHORN -->
-          <article data-breed-card="leghorn" class="pair-card hidden grid gap-4 rounded-2xl border border-ink/10 bg-cream-paper p-4 shadow-scene sm:grid-cols-2 sm:p-6" aria-hidden="true">
-            <figure class="overflow-hidden rounded-xl border border-ink/10 bg-cream">
-              <img src="images/breed-leghorn.jpg" alt="White Leghorn hen, studio portrait" class="h-56 w-full object-cover object-top sm:h-72" width="400" height="300" />
-              <figcaption class="px-3 py-2 text-xs text-ink-mute">White Leghorn hen · USDA ARS</figcaption>
-            </figure>
-            <div class="flex flex-col gap-2">
-              <div class="flex items-center gap-3">
-                <div class="egg-shell h-14 w-11 shrink-0" style="background:linear-gradient(145deg,#fffef9,#e7dfd2)" aria-hidden="true"></div>
-                <div>
-                  <h3 class="font-display text-xl text-ink">White egg · White Leghorn</h3>
-                  <p class="text-xs font-semibold uppercase tracking-wider text-teal">Mediterranean layer</p>
-                </div>
-              </div>
-              <ul class="space-y-1 text-sm leading-snug text-ink-soft">
-                <li><span class="font-semibold text-ink">Comb / wattles:</span> tall bright-red single comb; neat red wattles.</li>
-                <li><span class="font-semibold text-ink">Plumage:</span> sleek pure white; tight feathering.</li>
-                <li><span class="font-semibold text-ink">Body / posture:</span> light, upright, alert — built to lay, not bulk.</li>
-                <li><span class="font-semibold text-ink">Legs:</span> clean yellow shanks; white earlobes (classic white-egg cue).</li>
-              </ul>
-              <p class="simple text-sm leading-relaxed text-ink-soft" data-depth-block="simple">No brown or blue pigment is deposited, so the calcium shell reads chalk-white. Leghorns are the textbook white-egg commercial bird.</p>
-              <p class="advanced hidden text-sm leading-relaxed text-ink-soft" data-depth-block="advanced">White earlobes correlate strongly (not perfectly) with white eggs in Mediterranean breeds. Absence of protoporphyrin and biliverdin leaves an untinted calcite shell. Thin shells on high producers still need calcium management — color and shell strength are separate traits.</p>
-            </div>
-          </article>
-
-          <!-- ORPINGTON -->
-          <article data-breed-card="orpington" class="pair-card hidden grid gap-4 rounded-2xl border border-ink/10 bg-cream-paper p-4 shadow-scene sm:grid-cols-2 sm:p-6" aria-hidden="true">
-            <figure class="overflow-hidden rounded-xl border border-ink/10 bg-cream">
-              <img src="images/breed-orpington.jpg" alt="Buff Orpington-type hen sitting on straw nest" class="h-56 w-full object-cover sm:h-72" width="400" height="300" />
-              <figcaption class="px-3 py-2 text-xs text-ink-mute">Buff Orpington–type hen on nest</figcaption>
-            </figure>
-            <div class="flex flex-col gap-2">
-              <div class="flex items-center gap-3">
-                <div class="egg-shell h-14 w-11 shrink-0" style="background:linear-gradient(145deg,#f7e7c8,#e2c08a)" aria-hidden="true"></div>
-                <div>
-                  <h3 class="font-display text-xl text-ink">Tinted egg · Buff Orpington</h3>
-                  <p class="text-xs font-semibold uppercase tracking-wider text-teal">Heavy dual-purpose</p>
-                </div>
-              </div>
-              <ul class="space-y-1 text-sm leading-snug text-ink-soft">
-                <li><span class="font-semibold text-ink">Comb / wattles:</span> medium red single comb; soft red wattles.</li>
-                <li><span class="font-semibold text-ink">Plumage:</span> dense warm buff / light brown; fluffy outline.</li>
-                <li><span class="font-semibold text-ink">Body / posture:</span> broad, low, broody-looking; calm carriage.</li>
-                <li><span class="font-semibold text-ink">Legs:</span> sturdy clean shanks tucked under a heavy frame.</li>
-              </ul>
-              <p class="simple text-sm leading-relaxed text-ink-soft" data-depth-block="simple">Light brown or cream “tinted” eggs sit between chalk white and deep mahogany. Orpingtons are a gentle dual-purpose bird whose shells usually read softly colored, not stark white.</p>
-              <p class="advanced hidden text-sm leading-relaxed text-ink-soft" data-depth-block="advanced">Tinted shells carry a lighter load of protoporphyrin than dark brown layers. The pigment still arrives late in shell formation, so the tint is strongest near the surface. Heavy body type pairs with Large–XL eggs once the hen matures — color intensity and egg weight are not the same gene story.</p>
-            </div>
-          </article>
-
-          <!-- RIR -->
-          <article data-breed-card="rir" class="pair-card grid gap-4 rounded-2xl border border-ink/10 bg-cream-paper p-4 shadow-scene sm:grid-cols-2 sm:p-6" aria-hidden="false">
-            <figure class="overflow-hidden rounded-xl border border-ink/10 bg-cream">
-              <img src="images/breed-rir.jpg" alt="Rhode Island Red–type hen walking on green grass" class="h-56 w-full object-cover sm:h-72" width="400" height="300" />
-              <figcaption class="px-3 py-2 text-xs text-ink-mute">Rhode Island Red–type hen</figcaption>
-            </figure>
-            <div class="flex flex-col gap-2">
-              <div class="flex items-center gap-3">
-                <div class="egg-shell egg-speckle h-14 w-11 shrink-0" style="background:linear-gradient(145deg,#c9956a,#8a5330)" aria-hidden="true"></div>
-                <div>
-                  <h3 class="font-display text-xl text-ink">Brown egg · Rhode Island Red</h3>
-                  <p class="text-xs font-semibold uppercase tracking-wider text-teal">American dual-purpose</p>
-                </div>
-              </div>
-              <ul class="space-y-1 text-sm leading-snug text-ink-soft">
-                <li><span class="font-semibold text-ink">Comb / wattles:</span> bright red single comb with clear points; matching wattles.</li>
-                <li><span class="font-semibold text-ink">Plumage:</span> rich mahogany to golden-brown; dense layered feathers.</li>
-                <li><span class="font-semibold text-ink">Body / posture:</span> medium, plump, purposeful stride on pasture.</li>
-                <li><span class="font-semibold text-ink">Legs:</span> clean yellowish shanks; red earlobes (brown-egg cue).</li>
-              </ul>
-              <p class="simple text-sm leading-relaxed text-ink-soft" data-depth-block="simple">Brown eggs wear a pigment called protoporphyrin on the outer shell. Rhode Island Reds and related production browns are the classic American brown-egg bird you meet in pasture photos.</p>
-              <p class="advanced hidden text-sm leading-relaxed text-ink-soft" data-depth-block="advanced">Protoporphyrin IX is deposited in the shell gland late in formation, mostly on the cuticle and outer calcite. That is why brown can rub slightly and why the interior of a brown shell often looks whiter. Red earlobes track with brown eggs in many breeds. Speckling is extra surface pigment, not dirt by default.</p>
-            </div>
-          </article>
-
-          <!-- AMERAUCANA -->
-          <article data-breed-card="ameraucana" class="pair-card hidden grid gap-4 rounded-2xl border border-ink/10 bg-cream-paper p-4 shadow-scene sm:grid-cols-2 sm:p-6" aria-hidden="true">
-            <figure class="overflow-hidden rounded-xl border border-ink/10 bg-cream">
-              <img src="images/breed-ameraucana.jpg" alt="Blue-laced Ameraucana hen with muffs and beard" class="h-56 w-full object-cover object-top sm:h-72" width="400" height="300" />
-              <figcaption class="px-3 py-2 text-xs text-ink-mute">Ameraucana · muffs, beard, pea comb</figcaption>
-            </figure>
-            <div class="flex flex-col gap-2">
-              <div class="flex items-center gap-3">
-                <div class="egg-shell h-14 w-11 shrink-0" style="background:linear-gradient(145deg,#b7d6d8,#5a9399)" aria-hidden="true"></div>
-                <div>
-                  <h3 class="font-display text-xl text-ink">Blue egg · Ameraucana</h3>
-                  <p class="text-xs font-semibold uppercase tracking-wider text-teal">Blue-egg standard breed</p>
-                </div>
-              </div>
-              <ul class="space-y-1 text-sm leading-snug text-ink-soft">
-                <li><span class="font-semibold text-ink">Comb / wattles:</span> small red pea comb; muffs and beard hide the face line.</li>
-                <li><span class="font-semibold text-ink">Plumage:</span> here, blue-laced grey with charcoal edges; several APA colors exist.</li>
-                <li><span class="font-semibold text-ink">Body / posture:</span> medium, sturdy; full cheeks from facial feathering.</li>
-                <li><span class="font-semibold text-ink">Legs:</span> often slate; paired with the blue-egg genetic package.</li>
-              </ul>
-              <p class="simple text-sm leading-relaxed text-ink-soft" data-depth-block="simple">Blue eggs get their color from biliverdin in the shell itself. Ameraucanas (muffs, beard, pea comb) are a recognized blue-egg breed — different from rumpless tufted Araucanas and from mixed “Easter Eggers.”</p>
-              <p class="advanced hidden text-sm leading-relaxed text-ink-soft" data-depth-block="advanced">Biliverdin is incorporated earlier, so blue tints the full shell thickness — crack one open and the interior stays blue-green. The oocyan locus is dominant for blue. True Ameraucanas follow a breed standard; backyard blue layers without standard type are usually Easter Eggers. Do not confuse muffs/beard with Araucana ear tufts.</p>
-            </div>
-          </article>
-
-          <!-- OLIVE EGGER -->
-          <article data-breed-card="olive" class="pair-card hidden grid gap-4 rounded-2xl border border-ink/10 bg-cream-paper p-4 shadow-scene sm:grid-cols-2 sm:p-6" aria-hidden="true">
-            <figure class="overflow-hidden rounded-xl border border-ink/10 bg-cream">
-              <img src="images/breed-olive-egger.jpg" alt="Easter Egger hen with copper plumage, muffs, and slate legs" class="h-56 w-full object-cover sm:h-72" width="400" height="300" />
-              <figcaption class="px-3 py-2 text-xs text-ink-mute">Easter Egger / olive-cross type hen</figcaption>
-            </figure>
-            <div class="flex flex-col gap-2">
-              <div class="flex items-center gap-3">
-                <div class="egg-shell egg-speckle h-14 w-11 shrink-0" style="background:linear-gradient(145deg,#9aaa6e,#556334)" aria-hidden="true"></div>
-                <div>
-                  <h3 class="font-display text-xl text-ink">Olive egg · Olive Egger</h3>
-                  <p class="text-xs font-semibold uppercase tracking-wider text-teal">Blue × dark-brown cross</p>
-                </div>
-              </div>
-              <ul class="space-y-1 text-sm leading-snug text-ink-soft">
-                <li><span class="font-semibold text-ink">Comb / wattles:</span> often a pea comb; muffs and beard common on Egger types.</li>
-                <li><span class="font-semibold text-ink">Plumage:</span> copper to mahogany with darker lace; highly variable.</li>
-                <li><span class="font-semibold text-ink">Body / posture:</span> medium dual-purpose look; active pasture stride.</li>
-                <li><span class="font-semibold text-ink">Legs:</span> slate or willow shanks often travel with the blue-egg side.</li>
-              </ul>
-              <p class="simple text-sm leading-relaxed text-ink-soft" data-depth-block="simple">Olive eggs happen when blue-shell genetics meet dark brown pigment — brown over blue reads green. “Olive Egger” is a cross description, not a closed breed, so hens vary while the egg color logic stays the same.</p>
-              <p class="advanced hidden text-sm leading-relaxed text-ink-soft" data-depth-block="advanced">Structurally you still have biliverdin in the matrix plus protoporphyrin on top. Darker brown parents (for example Marans lines) deepen the olive; lighter brown parents give softer sage. This Phase 1 page explains the pigment stack — it does not compute a mating table.</p>
-            </div>
-          </article>
-
+        <div class="mt-4 grid gap-4 lg:grid-cols-[minmax(0,14rem)_minmax(0,1fr)]">
+          <div id="breed-list" class="breed-list flex max-h-[22rem] flex-row gap-1.5 overflow-x-auto pb-1 lg:max-h-[32rem] lg:flex-col lg:overflow-y-auto lg:overflow-x-hidden lg:pr-1" role="tablist" aria-label="Hen breeds"></div>
+          <div class="min-w-0">
+            <div id="breed-card-host"></div>
+            <p id="breed-empty" class="hidden rounded-2xl border border-dashed border-ink/20 bg-cream-paper p-6 text-sm text-ink-mute">No breeds match that search or filter. Clear the search or choose All.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -309,21 +189,29 @@
     <!-- SCENE: Sources -->
     <section id="scene-sources" data-scene="sources" class="scene">
       <div class="scene-inner scene-reveal max-w-3xl">
-        <p class="text-xs font-semibold uppercase tracking-[0.2em] text-teal">Phase 1 · Sources</p>
+        <p class="text-xs font-semibold uppercase tracking-[0.2em] text-teal">Sources</p>
         <h2 class="mt-2 font-display text-3xl text-ink sm:text-4xl">Citations &amp; photo credits</h2>
-        <div class="mt-6 space-y-3 text-sm leading-relaxed text-ink-soft">
+        <div class="mt-6 space-y-4 text-sm leading-relaxed text-ink-soft">
+          <div class="rounded-2xl border border-ink/10 bg-cream-paper p-4 shadow-soft">
+            <h3 class="font-display text-lg text-ink">Primary hatchery sources</h3>
+            <ul class="mt-2 list-disc space-y-2 pl-5">
+              <li><a href="https://www.koopscoops.com/" class="font-semibold text-teal no-underline hover:underline" target="_blank" rel="noopener noreferrer">Koops Coops</a> — fancy breeds &amp; healthy hens; weekly hatch list on the <a href="https://www.koopscoops.com/process/" class="text-teal hover:underline" target="_blank" rel="noopener noreferrer">2026 order / process page</a> (Easter Eggers, Salmon Faverolles, Cream Legbars, Barred Rocks, RI Reds, Buff / Lavender / Mottled Orpingtons, Black &amp; Blue Copper Marans, Australorps, Laced Wyandottes, Mystic Onyx, Speckled Sussex, Cochins, Mottled Java, Leghorns, Polish, Silkies, Olive Eggers, and more).</li>
+              <li><a href="https://www.mcmurrayhatchery.com/" class="font-semibold text-teal no-underline hover:underline" target="_blank" rel="noopener noreferrer">Murray McMurray Hatchery</a> — <a href="https://www.mcmurrayhatchery.com/mmhcat.html" class="text-teal hover:underline" target="_blank" rel="noopener noreferrer">online 2026 catalog</a> and <a href="https://www.mcmurrayhatchery.com/staticdoc/2026McMurrayHatcheryCatalog.pdf" class="text-teal hover:underline" target="_blank" rel="noopener noreferrer">PDF catalog</a> for breed egg color, hardiness, and Heritage notes.</li>
+              <li><a href="https://www.cacklehatchery.com/chicken-breeds/" class="font-semibold text-teal no-underline hover:underline" target="_blank" rel="noopener noreferrer">Cackle Hatchery breed chart</a> — egg size, color, and hardiness by breed; <a href="https://www.cacklehatchery.com/why-do-chicken-eggs-come-in-different-colors/" class="text-teal hover:underline" target="_blank" rel="noopener noreferrer">Why Do Chicken Eggs Come in Different Colors?</a> by Gail Damerow; backyard overview on <a href="https://www.cacklehatchery.com/raising-pet-chickens-for-your-backyard/" class="text-teal hover:underline" target="_blank" rel="noopener noreferrer">raising pet chickens</a>.</li>
+            </ul>
+          </div>
           <p>Samiullah, S., Roberts, J. R., &amp; Chousalkar, K. (2015). Eggshell color in brown-egg laying hens — a review. <em>World’s Poultry Science Journal</em>, 71(4). Covers protoporphyrin deposition on brown shells.</p>
           <p>Lang, M. R., &amp; Wells, J. W. (1981) and later shell-gland reviews: biliverdin (oocyan) tints the shell matrix earlier than surface brown pigment, so blue reads through the full thickness.</p>
           <p>USDA Agricultural Marketing Service — United States Standards for Quality of Shell Eggs: size classes are minimum net weight per dozen (Peewee through Jumbo), not breed names.</p>
-          <p>Romanoff, A. L., &amp; Romanoff, A. J. (1949). <em>The Avian Egg</em>. Wiley. Classic shape-index and morphometric framing (width ÷ length × 100).</p>
-          <p>Extension summaries (Penn State, Mississippi State, and similar) on blue-egg breeds, pea combs, muffs/beards, and olive eggs from blue × dark-brown crosses.</p>
-          <p class="text-xs text-ink-mute">Photos: USDA ARS White Leghorn (public domain); Wikimedia Commons Araucana / Ameraucana / Easter Egger images (CC BY-SA as attributed on Commons); Unsplash and Pexels farm hens under their licenses. See <code>docs/images/CREDITS.txt</code>.</p>
+          <p>Optional heritage context: <a href="https://livestockconservancy.org/" class="text-teal hover:underline" target="_blank" rel="noopener noreferrer">The Livestock Conservancy</a> priority lists (referenced via McMurray catalog notes).</p>
+          <p class="text-xs text-ink-mute">Photos: USDA ARS White Leghorn (public domain); Wikimedia Commons Araucana / Ameraucana / Easter Egger images (CC BY-SA as attributed on Commons); Unsplash and Pexels farm hens under their licenses. Breeds without a photo use a CSS hen silhouette + egg color swatch — never hotlinked hatchery images. See <code>docs/images/CREDITS.txt</code>. Each breed card also footnotes the hatchery pages used for that entry.</p>
         </div>
         <p class="mt-10 text-sm text-ink-mute">
           <a href="https://frank-dixon.github.io/" class="font-semibold text-teal no-underline hover:text-teal-bright">← Back to hub</a>
         </p>
       </div>
     </section>
+
 
   </main>
 

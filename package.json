@@ -1,8 +1,8 @@
 {
   "name": "shellwork",
   "private": true,
-  "version": "0.2.0",
-  "description": "Shellwork — immersive hen↔egg journey (Tailwind + minified JS)",
+  "version": "0.3.0",
+  "description": "Shellwork \u2014 immersive hen\u2194egg journey with 30+ filterable breeds (Tailwind + bundled JS)",
   "scripts": {
     "build:css": "tailwindcss -i ./src/input.css -o ./docs/css/shellwork.css --minify",
     "build:js": "node scripts/build-js.js",
