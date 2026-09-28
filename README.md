@@ -22,6 +22,8 @@ Open `docs/index.html` (or serve `docs/`). Prefer Tailwind utilities in HTML.
 npm run build   # css + js once before commit
 ```
 
-## Deploy
+## Live demo
 
-GitHub Pages is **not** enabled yet. Push is for review only until Frank says deploy/ship.
+**https://frank-dixon.github.io/shellwork/**
+
+GitHub Pages serves `/docs` from `main`. Portfolio micro-projects always commit, push, and deploy Pages on update.
