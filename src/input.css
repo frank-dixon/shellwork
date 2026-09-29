@@ -65,7 +65,7 @@
 
   .ambient-blob {
     @apply absolute rounded-full blur-3xl;
-    background: radial-gradient(circle, rgba(11, 138, 143, 0.18) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(58, 114, 99, 0.18) 0%, transparent 70%);
   }
 
   .ambient-cloud {
@@ -75,7 +75,7 @@
 
   .ambient-particle {
     @apply absolute rounded-full bg-teal/25;
-    box-shadow: 0 0 12px rgba(11, 138, 143, 0.2);
+    box-shadow: 0 0 12px rgba(58, 114, 99, 0.2);
   }
 
   .scene-nav-dot {
@@ -88,9 +88,9 @@
 
   .depth-btn.is-active,
   .breed-tabs button.is-active {
-    background: #0B8A8F;
+    background: #3A7263;
     color: #fffaf3;
-    border-color: #0B8A8F;
+    border-color: #3A7263;
   }
 
 .breed-filters .breed-filter-btn,
@@ -104,9 +104,9 @@
 
   .breed-filter-btn.is-active,
   .breed-pick-btn.is-active {
-    background: #0B8A8F;
+    background: #3A7263;
     color: #fffaf3;
-    border-color: #0B8A8F;
+    border-color: #3A7263;
   }
 
   .breed-pick-btn {
@@ -141,7 +141,7 @@
 
   .hen-placeholder {
     background:
-      radial-gradient(circle at 50% 20%, rgba(11, 138, 143, 0.12), transparent 55%),
+      radial-gradient(circle at 50% 20%, rgba(58, 114, 99, 0.12), transparent 55%),
       linear-gradient(180deg, #fffaf3 0%, #ebe2d4 100%);
   }
 
@@ -187,4 +187,23 @@
       transform: none !important;
     }
   }
+}
+
+/* Eggshell take on the hex-dial system: two-stop blue-green → brown egg ombre,
+   a faint hex lattice on the paper, thin etched rules */
+@layer base {
+  :root { --sw-a: #6f9e8c; --sw-b: #9c5634; }
+  body {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='48.5' viewBox='0 0 28 48.5'%3E%3Cpath d='M14 0v8.1M14 48.5v-8.1M0 16.2l14-8.1 14 8.1v16.1l-14 8.1-14-8.1z' fill='none' stroke='%231c1916' stroke-opacity='.045'/%3E%3C/svg%3E");
+  }
+  .font-display { letter-spacing: 0.01em; }
+  :focus-visible { outline: 2px solid #3A7263; outline-offset: 2px; }
+}
+@layer components {
+  .sw-rule { height: 1px; background: linear-gradient(90deg, var(--sw-a), var(--sw-b)); }
+  .sw-cta {
+    background: linear-gradient(90deg, #3A7263, #9C5634);
+    color: #fffaf3;
+  }
+  .sw-cta:hover { filter: brightness(1.08); }
 }

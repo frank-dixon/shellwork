@@ -1,4 +1,4 @@
-/** Shellwork — cream shell / ink / turquoise accent */
+/** Shellwork — eggshell paper / ink / Ameraucana blue-green → Marans brown */
 module.exports = {
   content: ["./docs/**/*.{html,js}", "./src/js/**/*.js"],
   theme: {
@@ -15,19 +15,20 @@ module.exports = {
           mute: "#6b645c",
         },
         terra: {
-          DEFAULT: "#c45c3e",
-          deep: "#9a3f28",
+          DEFAULT: "#9C5634",
+          deep: "#7A3E22",
           soft: "#e8a08c",
         },
         teal: {
-          DEFAULT: "#0B8A8F",
-          bright: "#12a8ae",
-          mist: "#d5ebe6",
+          DEFAULT: "#3A7263",
+          bright: "#4C8A78",
+          mist: "#dde9e2",
         },
       },
       fontFamily: {
-        display: ['"Fraunces"', "Georgia", "serif"],
-        sans: ['"Source Sans 3"', "system-ui", "sans-serif"],
+        display: ["Michroma", '"IBM Plex Sans"', "system-ui", "sans-serif"],
+        sans: ['"IBM Plex Sans"', "system-ui", "sans-serif"],
+        mono: ['"IBM Plex Mono"', "ui-monospace", "monospace"],
       },
       boxShadow: {
         scene: "0 22px 48px rgba(28, 25, 22, 0.12)",

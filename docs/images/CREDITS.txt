@@ -5,8 +5,32 @@ Photo credits (Wikimedia Commons / public domain / licensed stock):
 - breed-araucana.jpg — Wikimedia Commons Aracuana Henne cropped (CC BY-SA)
 - breed-ameraucana.jpg — Wikimedia Commons Ameraucana (CC BY-SA / as attributed on Commons)
 - breed-olive-egger.jpg — Wikimedia Commons Gem (Easter Egger hen) (CC BY-SA); also used as visual stand-in for Olive Egger card
-- breed-sussex.jpg — Pexels Columbian-pattern hen, Pexels License
+- breed-ancona.jpg — Uikitireza, CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Poule_Anc%C3%B4ne_noir_caillout%C3%A9_blanc_GR.jpg
+- breed-minorca.jpg — Spaarnestad Photo (photographer unknown), Public domain — https://commons.wikimedia.org/wiki/File:Kip_(zwarte_minorca_hen)_op_pluimveetentoonstelling_(van_de_Amsterdamse_Pluimvee_Club)_in_Amsterdam,_SFA022806240.jpg
+- breed-polish.jpg — Wildcarno, CC0 — https://commons.wikimedia.org/wiki/File:White_crested_polish_hen.jpg
+- breed-silkie.jpg — Frank Vincentz, CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:Kluse_-_Silkie_Bantam_hen_04_ies.jpg
+- breed-hamburg.jpg — Jay & Melissa Malouin from North Hampton, USA, CC BY-SA 2.0 — https://commons.wikimedia.org/wiki/File:Silver_Spangled_Hen.jpg
+- breed-lavender-orpington.jpg — Idéalités, CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Orpington_lavande.jpg
+- breed-faverolles.jpg — stephen jones from uk, CC BY 2.0 — https://commons.wikimedia.org/wiki/File:Salmon_Faverolles_cock_and_hen_(cropped).jpg
+- breed-barred-rock.jpg — Thomas Kriese, CC BY 2.0 — https://commons.wikimedia.org/wiki/File:Barred_Rock_hen_in_backyard.jpg
+- breed-australorp.jpg — Thomon, CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Poule_australorp_noire.jpg
+- breed-blue-australorp.jpg — Arie M. den Toom, CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Auustralorp_blauw_gezoomd_26_w.jpg
+- breed-wyandotte.jpg — Holly from asheville, usa, CC BY 2.0 — https://commons.wikimedia.org/wiki/File:Silver_Laced_trio.jpg
+- breed-new-hampshire.jpg — Bodlina, CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:New_Hampshire_Red_Hen.jpg
+- breed-brahma.jpg — Drcbrothephotographer, CC BY 4.0 — https://commons.wikimedia.org/wiki/File:Light_Brahma_(maybe_bantam)_hen_in_Gyeongju_2025-01-15.jpg
+- breed-cochin.jpg — Benoit Brummer (Trougnouf), CC BY 4.0 — https://commons.wikimedia.org/wiki/File:Cochin_fauve_%C3%A0_Auderghem_(DSCF6331).jpg
+- breed-jersey-giant.jpg — Uikitireza, CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Poule_G%C3%A9ante_de_Jersey_1.jpg
+- breed-dominique.jpg — gunthercox, CC0 — https://commons.wikimedia.org/wiki/File:Dominique_chicken.JPG
+- breed-delaware.jpg — Josh Larios from Seattle, US, CC BY-SA 2.0 — https://commons.wikimedia.org/wiki/File:Delaware_pullet_in_foreground.jpg
+- breed-java.jpg — Uikitireza, CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Poule_Java_noire.jpg
+- breed-naked-neck.jpg — Simone Ramella from Rome, Italy, CC BY 2.0 — https://commons.wikimedia.org/wiki/File:Naked_Neck_hens_-_Italy.jpg
+- breed-black-copper-marans.jpg — Nienetwiler, CC BY 2.5 CH — https://commons.wikimedia.org/wiki/File:Maranshenne-Kupferschwarz.jpg
+- breed-blue-copper-marans.jpg — ThomasHoemske, CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:Marans_blau-kupfer.jpg
+- breed-welsummer.jpg — Josh Larios from Seattle, US, CC BY-SA 2.0 — https://commons.wikimedia.org/wiki/File:Welsummer_hen.jpg
+- breed-barnevelder.jpg — Morgan Leigh, CC BY-SA 2.5 — https://commons.wikimedia.org/wiki/File:Barnevelder_hen.jpg
+- breed-cream-legbar.jpg — Kringln, CC0 — https://commons.wikimedia.org/wiki/File:Adult_Cream_Legbar_Hen_(cropped).jpg
+- breed-sussex.jpg — Davee, CC BY 2.0 — https://commons.wikimedia.org/wiki/File:Speckled_Sussex_Chicken.jpg
 
-Breeds without a dedicated photo use an on-page CSS hen silhouette + egg color swatch
-with explicit credit text on the card. No images are hotlinked or scraped from
-Koops Coops, Murray McMurray Hatchery, or Cackle Hatchery.
+Breeds with no freely licensed photo (Mottled English Orpington, Mystic Onyx, Whiting True Green,
+Dark Olive Egger) use an on-page CSS hen silhouette + egg color swatch. No images are hotlinked
+or scraped from Koops Coops, Murray McMurray Hatchery, or Cackle Hatchery.

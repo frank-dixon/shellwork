@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Shellwork — laying-hen eggs &amp; the hens that lay them</title>
-  <meta name="description" content="Immersive hen↔egg journey: searchable catalog of 30+ breeds with egg color, size, hen traits, and cited hatchery sources.">
+  <meta name="description" content="Match chicken breeds to the eggs they lay: 36 breeds by egg color, shape, and size, with hen traits and cited hatchery sources.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/shellwork.css">
 </head>
 <body class="min-h-screen bg-cream text-ink">
@@ -18,19 +18,20 @@
   <header class="sticky top-0 z-50 border-b border-ink/10 bg-cream-paper/95 backdrop-blur-sm">
     <div class="mx-auto flex max-w-5xl items-center justify-between gap-3 px-4 py-3 sm:px-6">
       <div class="flex items-baseline gap-3">
-        <a href="https://frank-dixon.github.io/" class="text-xs font-semibold uppercase tracking-[0.22em] text-teal no-underline hover:text-teal-bright">Hub</a>
+        <a href="https://frank-dixon.github.io/" class="font-mono text-[0.72rem] font-medium uppercase tracking-[0.14em] text-ink-soft no-underline hover:text-ink"><span aria-hidden="true">←</span> Frank Dixon</a>
         <span class="text-ink/20" aria-hidden="true">/</span>
-        <span class="font-display text-lg tracking-wide text-ink">Shellwork</span>
+        <span class="font-display text-sm text-ink">Shellwork</span>
       </div>
       <div class="flex rounded-full border border-ink/15 bg-cream p-0.5" role="group" aria-label="Reading depth">
         <button type="button" data-depth="simple" aria-pressed="true" class="depth-btn rounded-full px-3 py-1 text-xs font-semibold tracking-wide text-ink-mute hover:text-ink">Simple</button>
         <button type="button" data-depth="advanced" aria-pressed="false" class="depth-btn rounded-full px-3 py-1 text-xs font-semibold tracking-wide text-ink-mute hover:text-ink">Advanced</button>
       </div>
     </div>
+    <div class="sw-rule" aria-hidden="true"></div>
   </header>
 
   <!-- Side scene navigator -->
-  <nav class="fixed right-3 top-1/2 z-40 hidden -translate-y-1/2 flex-col gap-3 sm:flex" aria-label="Scene journey">
+  <nav class="fixed right-3 top-1/2 z-40 hidden -translate-y-1/2 flex-col gap-3 sm:flex" aria-label="Page sections">
     <button type="button" class="scene-nav-dot is-active" data-scene-nav="enter" aria-label="Enter" aria-current="true"></button>
     <button type="button" class="scene-nav-dot" data-scene-nav="color" aria-label="Color"></button>
     <button type="button" class="scene-nav-dot" data-scene-nav="shape" aria-label="Shape"></button>
@@ -47,19 +48,19 @@
         <div class="absolute right-[12%] bottom-[18%] h-56 w-56 rounded-full bg-terra-soft/30 blur-3xl"></div>
       </div>
       <div class="scene-inner scene-reveal max-w-3xl">
-        <p class="text-xs font-semibold uppercase tracking-[0.28em] text-teal">Immersive journey · Phase 1</p>
-        <h1 class="mt-4 font-display text-5xl leading-none tracking-wide text-ink sm:text-7xl">Shellwork</h1>
+        <p class="text-xs font-semibold uppercase tracking-[0.28em] text-teal">Hens &amp; their eggs</p>
+        <h1 class="mt-4 font-display text-4xl leading-none text-ink sm:text-6xl">Shellwork</h1>
         <p class="mt-6 max-w-xl text-lg leading-relaxed text-ink-soft sm:text-xl">
-          Move through color, shape, and size — dozens of hen breeds searchable by egg-color family, each paired with shell traits you can see: comb, wattles, plumage, body, and legs.
+          Pick a breed, see its egg. 36 laying breeds grouped by shell color, each with the traits you can spot in the run: comb, wattles, plumage, body, and legs.
         </p>
         <p class="simple mt-4 max-w-xl text-base leading-relaxed text-ink-soft" data-depth-block="simple">
-          Scroll or use the dots on the right to travel scene by scene. Soft ambient motion keeps the space alive while you read.
+          Planning a colorful egg basket or just curious what your hens will lay? Start with color, then check shape and size.
         </p>
         <p class="advanced mt-4 hidden max-w-xl text-base leading-relaxed text-ink-soft" data-depth-block="advanced">
-          This is a scroll-driven place, not a page-turn magazine. Parallax layers and ambient drift respond to motion preference; cited poultry science sits under Simple ↔ Advanced on every topic scene.
+          Advanced mode adds shell-pigment chemistry, hatchery production figures, and conservation status for every breed and topic.
         </p>
-        <a href="#scene-color" class="mt-10 inline-flex items-center gap-2 rounded-full border border-teal/40 bg-cream-paper px-5 py-2.5 text-sm font-semibold text-teal shadow-soft no-underline transition hover:border-teal hover:bg-teal hover:text-cream-paper">
-          Enter the color scene
+        <a href="#scene-color" class="mt-10 inline-flex items-center gap-2 sw-cta rounded-full px-6 py-3 text-sm font-semibold shadow-soft no-underline transition">
+          Browse breeds by egg color
           <span aria-hidden="true">↓</span>
         </a>
       </div>
@@ -70,12 +71,12 @@
       <div class="parallax-layer pointer-events-none absolute -left-16 top-24 h-64 w-64 rounded-full bg-teal/10 blur-3xl" data-parallax="0.22" aria-hidden="true"></div>
       <div class="scene-inner scene-reveal">
         <p class="text-xs font-semibold uppercase tracking-[0.2em] text-teal">Color</p>
-        <h2 class="mt-1 font-display text-3xl text-ink sm:text-4xl">Egg + hen, paired</h2>
+        <h2 class="mt-1 font-display text-2xl text-ink sm:text-3xl">Egg + hen, paired</h2>
         <p class="simple mt-3 max-w-3xl text-base leading-relaxed text-ink-soft" data-depth-block="simple">
           Shell color comes from the hen, not from what she ate that week. Search or filter by egg-color family, then pick a breed to see her traits beside the egg she is known for — white, tinted, brown, dark chocolate, blue, or olive.
         </p>
         <p class="advanced mt-3 hidden max-w-3xl text-base leading-relaxed text-ink-soft" data-depth-block="advanced">
-          Brown shells wear protoporphyrin IX deposited late in the shell gland onto the outer shell and cuticle. Blue-green shells carry biliverdin (oocyan) earlier in the matrix, so the tint shows through the full thickness. Layer brown over blue and you get olive. White eggs simply lack those pigments — calcium carbonate shows through. Breed notes cite Koops Coops, Murray McMurray Hatchery, and Cackle Hatchery (Gail Damerow) with live outbound links.
+          Brown shells wear protoporphyrin IX deposited late in the shell gland onto the outer shell and cuticle. Blue-green shells carry biliverdin (oocyan) earlier in the matrix, so the tint shows through the full thickness. Layer brown over blue and you get olive. White eggs simply lack those pigments — calcium carbonate shows through. Breed notes cite Koops Coops, Murray McMurray Hatchery, and Cackle Hatchery (Gail Damerow).
         </p>
 
         <div class="mt-5 flex flex-col gap-3">
@@ -102,12 +103,12 @@
       <div class="parallax-layer pointer-events-none absolute right-[-8%] top-[20%] h-72 w-72 rounded-full bg-teal-mist/80 blur-3xl" data-parallax="0.18" aria-hidden="true"></div>
       <div class="scene-inner scene-reveal">
         <p class="text-xs font-semibold uppercase tracking-[0.2em] text-teal">Shape</p>
-        <h2 class="mt-1 font-display text-3xl text-ink sm:text-4xl">Round, classic, pointed</h2>
+        <h2 class="mt-1 font-display text-2xl text-ink sm:text-3xl">Round, classic, pointed</h2>
         <p class="simple mt-3 max-w-3xl text-base leading-relaxed text-ink-soft" data-depth-block="simple">
           Most table eggs are gently oval: a blunt end and a slightly sharper tip. Breed and hen age nudge that silhouette. Sudden runs of very odd shapes can flag stress or health issues; everyday scatter is normal flock variation.
         </p>
         <p class="advanced mt-3 hidden max-w-3xl text-base leading-relaxed text-ink-soft" data-depth-block="advanced">
-          Shape index (width ÷ length × 100) near the mid-70s describes a classic table egg; lower numbers read more elongated. Membranes and the shell gland set the form hours before lay. Light Mediterranean birds can look a touch more elongated; heavy dual-purpose hens often look rounder. Extreme misshapes deserve a flock check — this page is a reading guide, not a diagnosis tool.
+          Shape index (width ÷ length × 100) near the mid-70s describes a classic table egg; lower numbers read more elongated. Membranes and the shell gland set the form hours before lay. Light Mediterranean birds can look a touch more elongated; heavy dual-purpose hens often look rounder. Extreme misshapes deserve a flock health check.
         </p>
         <div class="mt-8 grid gap-5 sm:grid-cols-2">
           <div class="flex flex-col items-center gap-3 rounded-2xl border border-ink/10 bg-cream-paper p-5 shadow-soft">
@@ -151,12 +152,12 @@
       <div class="parallax-layer pointer-events-none absolute left-[-6%] bottom-[10%] h-80 w-80 rounded-full bg-terra-soft/25 blur-3xl" data-parallax="0.2" aria-hidden="true"></div>
       <div class="scene-inner scene-reveal">
         <p class="text-xs font-semibold uppercase tracking-[0.2em] text-teal">Size</p>
-        <h2 class="mt-1 font-display text-3xl text-ink sm:text-4xl">Weight classes, breed norms</h2>
+        <h2 class="mt-1 font-display text-2xl text-ink sm:text-3xl">Weight classes, breed norms</h2>
         <p class="simple mt-3 max-w-3xl text-base leading-relaxed text-ink-soft" data-depth-block="simple">
           Carton names are weight per dozen. A Large egg is about two ounces. Light Mediterranean breeds such as White Leghorns often sit Medium–Large; heavier dual-purpose hens like Orpingtons and mature Rhode Island Reds push Large and Extra Large as they age.
         </p>
         <p class="advanced mt-3 hidden max-w-3xl text-base leading-relaxed text-ink-soft" data-depth-block="advanced">
-          USDA size names are minimum net weights per dozen, not genetic labels. Egg weight rises with hen age and body weight and responds to nutrition and day length. Breed sets a typical band — Leghorns stay relatively light; Orpingtons and other heavy dual-purpose birds trend heavier — but this issue does not predict cross outcomes. Use the slider to feel the scale ladder while the paired notes below keep breed context beside the shell.
+          USDA size names are minimum net weights per dozen, not genetic labels. Egg weight rises with hen age and body weight and responds to nutrition and day length. Breed sets a typical band — Leghorns stay relatively light; Orpingtons and other heavy dual-purpose birds trend heavier.
         </p>
         <div class="mt-8 grid gap-5 sm:grid-cols-2">
           <div class="flex flex-col items-center gap-3 rounded-2xl border border-ink/10 bg-cream-paper p-5 shadow-soft">
@@ -190,7 +191,7 @@
     <section id="scene-sources" data-scene="sources" class="scene">
       <div class="scene-inner scene-reveal max-w-3xl">
         <p class="text-xs font-semibold uppercase tracking-[0.2em] text-teal">Sources</p>
-        <h2 class="mt-2 font-display text-3xl text-ink sm:text-4xl">Citations &amp; photo credits</h2>
+        <h2 class="mt-2 font-display text-2xl text-ink sm:text-3xl">Citations &amp; photo credits</h2>
         <div class="mt-6 space-y-4 text-sm leading-relaxed text-ink-soft">
           <div class="rounded-2xl border border-ink/10 bg-cream-paper p-4 shadow-soft">
             <h3 class="font-display text-lg text-ink">Primary hatchery sources</h3>
@@ -203,17 +204,24 @@
           <p>Samiullah, S., Roberts, J. R., &amp; Chousalkar, K. (2015). Eggshell color in brown-egg laying hens — a review. <em>World’s Poultry Science Journal</em>, 71(4). Covers protoporphyrin deposition on brown shells.</p>
           <p>Lang, M. R., &amp; Wells, J. W. (1981) and later shell-gland reviews: biliverdin (oocyan) tints the shell matrix earlier than surface brown pigment, so blue reads through the full thickness.</p>
           <p>USDA Agricultural Marketing Service — United States Standards for Quality of Shell Eggs: size classes are minimum net weight per dozen (Peewee through Jumbo), not breed names.</p>
-          <p>Optional heritage context: <a href="https://livestockconservancy.org/" class="text-teal hover:underline" target="_blank" rel="noopener noreferrer">The Livestock Conservancy</a> priority lists (referenced via McMurray catalog notes).</p>
-          <p class="text-xs text-ink-mute">Photos: USDA ARS White Leghorn (public domain); Wikimedia Commons Araucana / Ameraucana / Easter Egger images (CC BY-SA as attributed on Commons); Unsplash and Pexels farm hens under their licenses. Breeds without a photo use a CSS hen silhouette + egg color swatch — never hotlinked hatchery images. See <code>docs/images/CREDITS.txt</code>. Each breed card also footnotes the hatchery pages used for that entry.</p>
+          <p>Heritage breed context: <a href="https://livestockconservancy.org/" class="text-teal hover:underline" target="_blank" rel="noopener noreferrer">The Livestock Conservancy</a> priority lists (referenced via McMurray catalog notes).</p>
+          <details class="rounded-2xl border border-ink/10 bg-cream-paper p-4 shadow-soft">
+            <summary class="cursor-pointer font-display text-lg text-ink">Photo credits</summary>
+            <p class="mt-2 text-xs text-ink-mute">Breed photos come from Wikimedia Commons (CC0, CC BY, CC BY-SA, or public domain), USDA ARS (public domain), Unsplash, and Pexels under their respective licenses. Each credit links to the original file.</p>
+            <ul id="photo-credits-list" class="mt-3 grid gap-1 text-xs leading-relaxed text-ink-mute sm:grid-cols-2"></ul>
+          </details>
         </div>
-        <p class="mt-10 text-sm text-ink-mute">
-          <a href="https://frank-dixon.github.io/" class="font-semibold text-teal no-underline hover:text-teal-bright">← Back to hub</a>
-        </p>
       </div>
     </section>
 
 
   </main>
+
+  <footer class="relative z-10 border-t border-ink/10 bg-cream-paper">
+    <div class="mx-auto max-w-5xl px-4 py-6 text-sm text-ink-mute sm:px-6">
+      <p>Shellwork · Built by <a class="font-semibold text-teal hover:underline" href="https://frank-dixon.github.io/">Frank Dixon</a></p>
+    </div>
+  </footer>
 
   <style>
     html[data-depth="simple"] [data-depth-block="advanced"] { display: none !important; }

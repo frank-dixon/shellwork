@@ -162,11 +162,20 @@ import { BREEDS, EGG_FAMILIES, EGG_SHELL_STYLE, getBreedById } from './breeds.js
     renderBreedCard();
   }
 
+  function photoCaption(breed) {
+    if (!breed.photoCredit) return '';
+    var credit = escapeHtml(breed.photoCredit);
+    if (breed.photoSource) {
+      credit = '<a href="' + escapeHtml(breed.photoSource) + '" class="underline-offset-2 hover:text-teal hover:underline" target="_blank" rel="noopener noreferrer">' + credit + '</a>';
+    }
+    return '<figcaption class="px-3 py-2 text-xs text-ink-mute">' + credit + '</figcaption>';
+  }
+
   function henVisual(breed) {
     if (breed.photo) {
       return '<figure class="overflow-hidden rounded-xl border border-ink/10 bg-cream">' +
-        '<img src="' + escapeHtml(breed.photo) + '" alt="' + escapeHtml(breed.name) + ' hen" class="h-56 w-full object-cover object-top sm:h-72" width="400" height="300" loading="lazy" />' +
-        '<figcaption class="px-3 py-2 text-xs text-ink-mute">' + escapeHtml(breed.photoCredit) + '</figcaption></figure>';
+        '<img src="' + escapeHtml(breed.photo) + '" alt="' + escapeHtml(breed.photoAlt || breed.name + ' hen') + '" class="h-56 w-full object-cover object-top sm:h-72" width="400" height="300" loading="lazy" />' +
+        photoCaption(breed) + '</figure>';
     }
     var shell = EGG_SHELL_STYLE[breed.eggColorFamily];
     return '<figure class="overflow-hidden rounded-xl border border-ink/10 bg-cream">' +
@@ -175,7 +184,7 @@ import { BREEDS, EGG_FAMILIES, EGG_SHELL_STYLE, getBreedById } from './breeds.js
       '<div class="egg-shell h-12 w-9' + (shell.speckled ? ' egg-speckle' : '') + '" style="background:' + shell.bg + '" aria-hidden="true"></div>' +
       '<p class="px-4 text-center text-xs font-semibold text-ink-soft">' + escapeHtml(breed.name) + '</p>' +
       '</div>' +
-      '<figcaption class="px-3 py-2 text-xs text-ink-mute">' + escapeHtml(breed.photoCredit) + '</figcaption></figure>';
+      photoCaption(breed) + '</figure>';
   }
 
   function renderBreedCard() {
@@ -193,7 +202,7 @@ import { BREEDS, EGG_FAMILIES, EGG_SHELL_STYLE, getBreedById } from './breeds.js
       '<div class="flex items-center gap-3">' +
       '<div class="egg-shell h-14 w-11 shrink-0' + (shell.speckled ? ' egg-speckle' : '') + '" style="background:' + shell.bg + '" aria-hidden="true"></div>' +
       '<div>' +
-      '<h3 class="font-display text-xl text-ink">' + escapeHtml(breed.eggColorLabel) + ' egg · ' + escapeHtml(breed.name) + '</h3>' +
+      '<h3 class="font-display text-lg leading-snug text-ink">' + escapeHtml(breed.eggColorLabel) + ' egg · ' + escapeHtml(breed.name) + '</h3>' +
       '<p class="text-xs font-semibold uppercase tracking-wider text-teal">' + escapeHtml(breed.tagline) + ' · ' + escapeHtml(familyLabel(breed.eggColorFamily)) + ' · ' + escapeHtml(breed.eggSize) + '</p>' +
       '</div></div>' +
       '<ul class="space-y-1 text-sm leading-snug text-ink-soft">' +
@@ -206,6 +215,24 @@ import { BREEDS, EGG_FAMILIES, EGG_SHELL_STYLE, getBreedById } from './breeds.js
       '<p class="advanced hidden text-sm leading-relaxed text-ink-soft" data-depth-block="advanced">' + escapeHtml(breed.advancedCopy) + '</p>' +
       '<p class="mt-1 text-[0.7rem] leading-relaxed text-ink-mute">Sources: ' + sourcesHtml + '</p>' +
       '</div></article>';
+  }
+
+  /* ---------- Photo credits (Sources scene) ---------- */
+  function renderPhotoCredits() {
+    var host = document.getElementById('photo-credits-list');
+    if (!host) return;
+    var seen = {};
+    var html = '';
+    BREEDS.forEach(function (b) {
+      if (!b.photo || !b.photoCredit || seen[b.photo]) return;
+      seen[b.photo] = true;
+      var credit = escapeHtml(b.photoCredit.replace(/^Photo( \([^)]*\))?: /, ''));
+      if (b.photoSource) {
+        credit = '<a href="' + escapeHtml(b.photoSource) + '" class="text-teal hover:underline" target="_blank" rel="noopener noreferrer">' + credit + '</a>';
+      }
+      html += '<li><span class="font-semibold text-ink-soft">' + escapeHtml(b.name) + '</span>: ' + credit + '</li>';
+    });
+    host.innerHTML = html;
   }
 
   function setBreed(id) {
@@ -357,6 +384,7 @@ import { BREEDS, EGG_FAMILIES, EGG_SHELL_STYLE, getBreedById } from './breeds.js
   setDepth(savedDepth);
   renderFilters();
   renderBreedList();
+  renderPhotoCredits();
   setShape(shapeRange ? shapeRange.value : 35);
   setSize(sizeRange ? sizeRange.value : 55);
   buildAmbient();
