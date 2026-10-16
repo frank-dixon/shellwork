@@ -1,0 +1,128 @@
+#!/usr/bin/env python3
+"""Freeze Shellwork and publish it into the shellwork/ folder of frank-dixon.github.io.
+
+    bin/publish --dry-run                       # build to a temp dir only; print the path
+    bin/publish --repo ../frank-dixon.github.io # build, replace <repo>/shellwork/, commit locally
+    bin/publish --repo ../frank-dixon.github.io --push   # ...then push and wait for the Pages build
+
+The repo path comes from --repo or $SHELLWORK_PAGES_REPO. Only <repo>/shellwork/
+is ever deleted or written; the run aborts before committing if anything else in
+the checkout changed, and it refuses to start on a dirty checkout.
+"""
+
+import argparse
+import json
+import os
+import shutil
+import subprocess
+import sys
+import tempfile
+import time
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+FOLDER = "shellwork"
+PAGES_REPO = "frank-dixon/frank-dixon.github.io"
+GH = shutil.which("gh", path="/usr/local/bin:" + os.environ.get("PATH", "")) or "gh"
+
+
+def run(*cmd, cwd=None, capture=True):
+    r = subprocess.run(cmd, cwd=cwd, text=True, capture_output=capture)
+    if r.returncode:
+        sys.exit(f"error: {' '.join(map(str, cmd))}\n{r.stderr or r.stdout}")
+    return (r.stdout or "").strip()
+
+
+def git(repo, *args):
+    return run("git", "-C", str(repo), *args)
+
+
+def changed_paths(repo):
+    """Every changed/untracked path (both sides of renames), from NUL-separated porcelain."""
+    raw = subprocess.run(["git", "-C", str(repo), "status", "--porcelain", "-z", "--untracked-files=all",
+                          "--no-renames"], check=True, capture_output=True, text=True).stdout
+    return [e[3:] for e in raw.split("\0") if e]
+
+
+def freeze(out):
+    env = dict(os.environ, DEBUG="false", DJANGO_SETTINGS_MODULE="config.settings")
+    env.setdefault("SECRET_KEY", "freeze-only-" + os.urandom(16).hex())
+    py = ROOT / ".venv" / "bin" / "python"
+    r = subprocess.run([str(py if py.exists() else sys.executable), "manage.py", "freeze_shellwork", "--out", str(out)],
+                       cwd=ROOT, env=env)
+    if r.returncode:
+        sys.exit("error: freeze failed")
+
+
+def wait_for_pages(sha, timeout=900):
+    print(f"Waiting for the GitHub Pages build of {sha[:7]}...")
+    deadline = time.time() + timeout
+    while time.time() < deadline:
+        r = subprocess.run([GH, "api", f"repos/{PAGES_REPO}/pages/builds/latest"], text=True, capture_output=True)
+        if r.returncode == 0:
+            b = json.loads(r.stdout)
+            if b.get("commit") == sha:
+                if b.get("status") == "built":
+                    print("Pages build finished: https://frank-dixon.github.io/shellwork/")
+                    return
+                if b.get("status") == "errored":
+                    sys.exit(f"error: Pages build errored: {b.get('error')}")
+        time.sleep(10)
+    sys.exit("error: timed out waiting for the Pages build")
+
+
+def main():
+    p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    p.add_argument("--repo", default=os.environ.get("SHELLWORK_PAGES_REPO"), help="frank-dixon.github.io checkout")
+    p.add_argument("--push", action="store_true", help="push the commit and wait for the Pages build")
+    p.add_argument("--dry-run", action="store_true", help="build to a temp dir; touch no repo")
+    p.add_argument("-m", "--message", default="Publish Shellwork")
+    a = p.parse_args()
+
+    if a.dry_run:
+        out = Path(tempfile.mkdtemp(prefix="shellwork-freeze-")) / FOLDER
+        freeze(out)
+        print(f"Dry run: built into {out} (serve its parent dir to preview at /{FOLDER}/). Nothing committed or pushed.")
+        return
+
+    if not a.repo:
+        sys.exit("error: pass --repo or set SHELLWORK_PAGES_REPO")
+    repo = Path(a.repo).expanduser().resolve()
+    if not (repo / ".git").exists():
+        sys.exit(f"error: {repo} is not a git checkout")
+    if git(repo, "status", "--porcelain"):
+        sys.exit(f"error: {repo} has uncommitted changes; commit or stash them first")
+    if a.push:
+        git(repo, "pull", "--ff-only")
+
+    with tempfile.TemporaryDirectory(prefix="shellwork-freeze-") as tmp:
+        build = Path(tmp) / FOLDER
+        freeze(build)
+        dest = repo / FOLDER
+        if dest.is_symlink() or (dest.exists() and not dest.is_dir()):
+            sys.exit(f"error: {dest} is not a plain directory; refusing")
+        if dest.exists():
+            shutil.rmtree(dest)
+        shutil.copytree(build, dest)
+
+    changed = changed_paths(repo)
+    outside = [f for f in changed if not f.startswith(FOLDER + "/")]
+    if outside:
+        sys.exit("error: files outside shellwork/ changed; aborting without committing:\n" + "\n".join(outside))
+    if not changed:
+        print("No changes to publish.")
+        return
+    git(repo, "add", "-A", "--", FOLDER)
+    git(repo, "commit", "-q", "-m", a.message, "--", FOLDER)
+    sha = git(repo, "rev-parse", "HEAD")
+    print(f"Committed {len(changed)} changed paths under {FOLDER}/ as {sha[:7]} in {repo}")
+    if a.push:
+        cred = ["-c", f"credential.helper=!{GH} auth git-credential"] if os.path.isabs(GH) else []
+        run("git", *cred, "-C", str(repo), "push", "-q", "origin", "HEAD")
+        wait_for_pages(sha)
+    else:
+        print("Not pushed (add --push).")
+
+
+if __name__ == "__main__":
+    main()
