@@ -1,0 +1,8 @@
+{% extends "shellwork/base.html" %}{% load shellwork_tags static %}
+{% block title %}Compare · Shellwork{% endblock %}
+{% block main %}<div class="page"><h1 class="display display--md">Compare</h1>
+<p class="lede" id="cmpEmpty"{% if slugs|length >= 2 %} hidden{% endif %}>Add two or three breeds with “+ Compare” on any card to see them side by side.</p>
+<div class="cmp" id="cmp" style="--n:{{ slugs|length|default:1 }}">{% for b in breeds %}<article class="cmp__col" data-slug="{{ b.slug }}"{% if b.slug not in slugs %} hidden{% endif %}><a href="{{ b.get_absolute_url }}"><h2>{{ b.name }}</h2></a>
+{% if b.hen_photo %}<img class="cmp__hen" src="{{ b.hen_photo.image.url }}" alt="{{ b.name }} hen" loading="lazy">{% endif %}{% egg_pair b 56 False %}
+{% include "shellwork/partials/spec.html" with long=1 %}</article>{% endfor %}</div></div>{% endblock %}
+{% block scripts %}<script src="{% static 'shellwork/js/compare-page.js' %}" defer></script>{% endblock %}

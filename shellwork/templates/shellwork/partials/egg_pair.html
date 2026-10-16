@@ -1,0 +1,6 @@
+{% load shellwork_tags %}<figure class="eggpair" style="--base:{{ base }}px">
+  <div class="eggpair__cell eggpair__cell--css">{% css_egg b base %}<small>Illustration</small></div>
+  <div class="eggpair__cell">{% if photo %}<img class="eggpair__photo" src="{{ photo.image.url }}" alt="Photo: {{ b.name }} egg. {{ photo.caption }}" loading="lazy"><small>Photo</small>
+  {% else %}<span class="eggpair__none" title="No openly licensed photo of this breed's egg found yet">No egg<br>photo</span><small>—</small>{% endif %}</div>
+  {% if credit and photo %}<figcaption>{% include "shellwork/partials/credit.html" with p=photo %}</figcaption>{% endif %}
+</figure>

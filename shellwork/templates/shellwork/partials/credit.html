@@ -1,0 +1,1 @@
+{% if p %}<span class="credit">{{ p.get_kind_display }} photo: <a href="{{ p.source_url }}" rel="noopener" target="_blank">{{ p.author|truncatechars:60 }}</a>, {% if p.license_url %}<a href="{{ p.license_url }}" rel="noopener license" target="_blank">{{ p.license_name }}</a>{% else %}{{ p.license_name }}{% endif %}, via Wikimedia Commons</span>{% endif %}

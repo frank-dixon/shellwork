@@ -1,0 +1,4 @@
+{% extends "shellwork/base.html" %}
+{% block title %}Sources · Shellwork{% endblock %}
+{% block main %}<div class="page"><h1 class="display display--md">Sources</h1><p class="lede">Every source used on this site. Hatchery figures describe their own flocks and can differ from breed standards.</p>
+<table class="srcs"><thead><tr><th>Breed</th><th>Source</th><th>Type</th><th>Supports</th></tr></thead><tbody>{% for c in cites %}<tr><td>{{ c.breed|default:"General" }}</td><td><a href="{{ c.url }}" rel="noopener" target="_blank">{{ c.publisher }}: {{ c.title }}</a></td><td>{{ c.get_kind_display }}</td><td>{{ c.supports_labels|join:", " }}</td></tr>{% endfor %}</tbody></table></div>{% endblock %}

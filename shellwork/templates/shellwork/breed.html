@@ -1,0 +1,25 @@
+{% extends "shellwork/base.html" %}{% load shellwork_tags %}
+{% block title %}{{ b.name }}: {{ b.egg_color_name }} eggs · Shellwork{% endblock %}
+{% block main %}
+<article class="detail">
+  <nav class="crumbs"><a href="{% url 'shellwork:index' %}">Breeds</a> / {{ b.name }}</nav>
+  <header class="detail__head"><span class="tab tab--{{ b.tab }}">{{ b.get_egg_color_category_display }}</span><h1 class="display display--md">{{ b.name }}</h1>
+  {% if b.is_cross %}<p class="pill">Cross, not a standardized breed</p>{% endif %}</header>
+  <div class="detail__grid">
+    <div class="sheet">{% include "shellwork/partials/spec.html" with long=1 %}
+      <div class="actions"><button class="btn btn--mint js-compare" type="button" data-slug="{{ b.slug }}" data-name="{{ b.name }}">+ Compare</button></div></div>
+    <div class="detail__media">
+      <figure class="hen">{% if b.hen_photo %}<img src="{{ b.hen_photo.image.url }}" alt="{{ b.name }} hen. {{ b.hen_photo.caption }}"><figcaption>{{ b.hen_photo.caption|truncatechars:140 }}<br>{% credit b.hen_photo %}</figcaption>
+      {% else %}<div class="hen__none">No openly licensed hen photo available</div>{% endif %}</figure>
+      <div class="eggstage">{% egg_pair b 96 True %}</div>
+    </div>
+  </div>
+  <div class="detail__notes">
+    {% if b.genetics_notes %}<section><h2>How the shell gets its color</h2><p>{{ b.genetics_notes }}</p></section>{% endif %}
+    {% if b.breeding_notes %}<section><h2>Breeding notes</h2><p>{{ b.breeding_notes }}</p></section>{% endif %}
+    {% if pairings %}<section><h2>Pairings</h2><ul class="pairs">{% for p in pairings %}<li><b>{{ p.parent_a }} × {{ p.parent_b_label|default:p.parent_b }}</b> → {{ p.expected_egg_color }} <small>({% if p.confidence == "sourced" %}reported by a breeder{% else %}inferred from genetics{% endif %})</small></li>{% endfor %}</ul></section>{% endif %}
+  </div>
+  <section class="cites"><h2>Sources</h2><ol>{% for c in cites %}<li><a href="{{ c.url }}" rel="noopener" target="_blank">{{ c.publisher }}: {{ c.title }}</a> <small>Accessed {{ c.accessed|date:"M j, Y" }}. Supports: {{ c.supports_labels|join:", " }}</small>{% if c.excerpt %}<blockquote>{{ c.excerpt }}</blockquote>{% endif %}</li>{% endfor %}</ol>
+  <p class="note">Egg shape: no source gives a typical shape for this breed, so it’s listed as “varies by hen.” Colors on screen are approximate.</p></section>
+</article>
+{% endblock %}

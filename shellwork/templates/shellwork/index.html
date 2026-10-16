@@ -1,0 +1,40 @@
+{% extends "shellwork/base.html" %}{% load static shellwork_tags %}
+{% block bodyclass %}home{% endblock %}
+{% block main %}
+<section class="hero" id="file" aria-label="Breed card file">
+  <div class="hero__left">
+  <div class="hero__brand"><h1 class="display">Shell<br><span>work</span></h1>
+    <p>A reference to chicken breeds by egg shell color, size and shape, with a source for each figure. Filter by egg, then open a card for details.</p></div>
+  <div class="hero__bottom">
+  <div class="filters" id="filters">
+    <div class="flt" role="group" aria-label="Egg color"><span class="flt__l">Egg color</span>{% for k,label,sw in cats %}<button type="button" class="chip" data-k="c" data-v="{{ k }}"><i style="background:{{ sw }}"></i>{{ label }}</button>{% endfor %}</div>
+    <div class="flt" role="group" aria-label="Size and shape"><span class="flt__l">Size and shape</span>{% for k,label in sizes %}<button type="button" class="chip" data-k="s" data-v="{{ k }}">{{ label }}</button>{% endfor %}{% for s in shapes %}<button type="button" class="chip" data-k="h" data-v="{{ s }}">{{ s }}</button>{% endfor %}<span class="cnt" id="cnt" aria-live="polite"></span></div>
+  </div>
+  <div class="ctl"><button class="btn" id="up" type="button">▲ Previous</button><button class="btn btn--mint" id="pull" type="button">Open card</button><button class="btn" id="down" type="button">▼ Next</button></div>
+  </div></div>
+  <div class="deskwrap">
+  <div class="desk"><div class="rail"></div><button class="knob knob--l" id="kl" type="button" aria-label="Previous card"></button><button class="knob knob--r" id="kr" type="button" aria-label="Next card"></button>
+    <div class="wheel" id="wheel" tabindex="0" aria-label="Breed cards. Use arrow keys to move, Enter to open."><div class="drum" id="drum">
+    {% for b in breeds %}<article class="rc" data-slug="{{ b.slug }}" data-c="{{ b.egg_color_category }}" data-s="{{ b.egg_size }}" data-h="{{ b.egg_shape }}" data-name="{{ b.name }}">
+      <span class="tab tab--{{ b.tab }}">{{ b.get_egg_color_category_display }}</span>
+      <h3>{{ b.name }}</h3><p class="rc__line">{{ b.egg_color_name|truncatechars:34 }} · {{ b.get_egg_size_display }}</p>
+      <div class="rc__eggs">{% egg_pair b 40 False %}</div>
+      {% if b.hen_photo %}<img class="rc__hen" src="{{ b.hen_photo.image.url }}" alt="" loading="lazy">{% endif %}
+    </article>{% endfor %}</div></div>
+    <div class="base"><span>SHELLWORK</span></div></div>
+  </div>
+</section>
+<div class="pulled" id="pulled" role="dialog" aria-modal="true" aria-label="Breed card" hidden><div class="pulled__in" id="pin"></div></div>
+{% for b in breeds %}<template id="t-{{ b.slug }}">
+<div class="pc pc--front"><div class="pc__head"><h3>{{ b.name }}</h3><span class="tab tab--{{ b.tab }}">{{ b.get_egg_color_category_display }}</span></div>
+  <div class="pc__grid"><div>{% include "shellwork/partials/spec.html" %}</div>
+  <div class="pc__media">{% if b.hen_photo %}<img class="pc__hen" src="{{ b.hen_photo.image.url }}" alt="{{ b.name }} hen. {{ b.hen_photo.caption }}">{% else %}<div class="pc__hen pc__hen--none">No openly licensed hen photo available</div>{% endif %}
+  {% egg_pair b 54 False %}</div></div>
+  {% if b.hen_photo or b.egg_photo %}<div class="pc__credits"><button type="button" class="pc__ctog" aria-expanded="false" aria-controls="cr-{{ b.slug }}">Image credits</button><p class="pc__credit" id="cr-{{ b.slug }}" hidden>{% if b.hen_photo %}{% credit b.hen_photo %}{% endif %}{% if b.egg_photo %}<br>{% credit b.egg_photo %}{% endif %}</p></div>{% endif %}
+  <div class="pc__act"><a class="btn btn--mint" href="{{ b.get_absolute_url }}">Full breed page →</a><button class="btn js-compare" type="button" data-slug="{{ b.slug }}" data-name="{{ b.name }}">+ Compare</button></div></div>
+</template>{% endfor %}
+<section class="band"><div class="band__in"><h2 class="display display--sm">Breeding for egg color</h2><p>Choose an egg color to see which crosses produce it, why, and the source for each.</p>
+<ul class="pairs">{% for p in pairings %}<li><b>{{ p.parent_a }} × {{ p.parent_b_label|default:p.parent_b }}</b> → {{ p.expected_egg_color }}</li>{% endfor %}</ul>
+<a class="btn btn--lav" href="{% url 'shellwork:helper' %}">See pairings by color →</a></div></section>
+{% endblock %}
+{% block scripts %}<script src="{% static 'shellwork/js/rolodex.js' %}" defer></script>{% endblock %}

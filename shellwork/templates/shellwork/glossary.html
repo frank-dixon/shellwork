@@ -1,0 +1,3 @@
+{% extends "shellwork/base.html" %}
+{% block title %}Glossary · Shellwork{% endblock %}
+{% block main %}<div class="page"><h1 class="display display--md">Glossary</h1><dl class="gloss">{% for t in terms %}<div id="{{ t.slug }}"><dt>{{ t.term }}</dt><dd>{{ t.definition }}{% if t.citation %} <small>Source: <a href="{{ t.citation.url }}" rel="noopener" target="_blank">{{ t.citation.publisher }}</a></small>{% endif %}</dd></div>{% endfor %}</dl></div>{% endblock %}

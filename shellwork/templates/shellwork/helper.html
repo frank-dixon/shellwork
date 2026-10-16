@@ -1,0 +1,13 @@
+{% extends "shellwork/base.html" %}{% load shellwork_tags %}
+{% block title %}Breeding for egg color · Shellwork{% endblock %}
+{% block main %}<div class="page"><h1 class="display display--md">Breeding for egg color</h1>
+<p class="lede">Choose an egg color. Each pairing lists the expected result, why it works, a source, and whether it’s reported by breeders or inferred from genetics.</p>
+<div class="flt flt--page" id="helperChips">{% for k,label,sw in targets %}<a class="chip{% if k == target %} on{% endif %}" href="?colour={{ k }}" data-cat="{{ k }}"><i style="background:{{ sw }}"></i>{{ label }}</a>{% endfor %}<a class="chip chip--clr" href="?" data-cat="">All colors</a></div>
+{% for k,ls in layers %}{% if ls %}<p class="lede js-layers" data-cat="{{ k }}"{% if k != target %} hidden{% endif %}>Breeds that already lay this color: {% for l in ls %}<a href="{{ l.get_absolute_url }}">{{ l.name }}</a>{% if not forloop.last %}, {% endif %}{% endfor %}.</p>{% endif %}{% endfor %}
+<div class="pairgrid">{% for p in pairs %}<article class="paircard" data-cat="{{ p.target_color_category }}"{% if target and p.target_color_category != target %} hidden{% endif %}>
+<div class="paircard__eq"><a href="{{ p.parent_a.get_absolute_url }}">{% css_egg p.parent_a 44 %}<span>{{ p.parent_a }}</span></a><b>×</b><a href="{{ p.parent_b.get_absolute_url }}">{% css_egg p.parent_b 44 %}<span>{{ p.parent_b_label|default:p.parent_b }}</span></a></div>
+<div class="paircard__kid">{% css_egg p.offspring 92 %}<span class="paircard__kicker">Expected egg</span><span class="paircard__kidlabel">{{ p.expected_egg_color }}</span></div>
+<p>{{ p.explanation }}</p>{% if p.variety_note %}<p class="small paircard__variety">{{ p.variety_note }}</p>{% endif %}
+<p class="small"><span class="pill pill--{{ p.confidence }}">{% if p.confidence == "sourced" %}Breeder-reported{% else %}Inferred from genetics{% endif %}</span>{% if p.source %} <a href="{{ p.source.url }}" rel="noopener" target="_blank">{{ p.source.publisher }}</a>{% endif %}</p></article>
+{% endfor %}</div><p class="lede" id="noPairs" hidden>No pairings listed for this color.</p></div>{% endblock %}
+{% block scripts %}{% load static %}<script src="{% static 'shellwork/js/helper.js' %}" defer></script>{% endblock %}

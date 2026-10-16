@@ -1,0 +1,1129 @@
+{
+ "breeds": [
+  {
+   "slug": "leghorn",
+   "name": "White Leghorn",
+   "egg_color_name": "White",
+   "egg_color_category": "white",
+   "egg_hex": "#F3F0E8",
+   "shell_finish": "gloss",
+   "egg_size": "L",
+   "egg_size_note": "Large (McMurray, Koops); large to extra-large (Livestock Conservancy)",
+   "lay_rate_min": 250,
+   "lay_rate_max": 300,
+   "temperament": "Very active. McMurray: disposition 'poor'",
+   "broodiness": "Rarely goes broody (seldom sits on eggs to hatch them)",
+   "autosexing": "unknown",
+   "genetics_notes": "White shell: almost no pigment is deposited.",
+   "breeding_notes": "Adds no brown pigment, so daughters of a Leghorn × blue-layer cross that carry the blue allele should lay blue (inferred from genetics).",
+   "sort_order": 0,
+   "citations": [
+    {
+     "publisher": "The Livestock Conservancy",
+     "title": "Leghorn - Non Industrial - Chicken",
+     "url": "https://livestockconservancy.org/heritage-breeds/heritage-breeds-list/leghorn-chicken/",
+     "kind": "conservancy",
+     "supports": "egg_color_name,egg_size,temperament",
+     "excerpt": "Egg Color: White; Egg Size: Large to Extra-Large; Temperament: Very Active",
+     "accessed": "2026-10-15"
+    },
+    {
+     "publisher": "McMurray Hatchery",
+     "title": "Pearl White Leghorns",
+     "url": "https://www.mcmurrayhatchery.com/pearl_white_leghorn.html",
+     "kind": "hatchery",
+     "supports": "egg_color_name,egg_size,broodiness,temperament",
+     "excerpt": "Egg Color: white; Egg Size: large; Disposition: poor; Broody: not at all likely",
+     "accessed": "2026-10-15"
+    },
+    {
+     "publisher": "Koops Coops",
+     "title": "White Leghorns",
+     "url": "https://www.koopscoops.com/product/white-leghorns/",
+     "kind": "hatchery",
+     "supports": "egg_size,lay_rate",
+     "excerpt": "Egg Size: Large; Eggs per year: 250-300; Not very broody",
+     "accessed": "2026-10-15"
+    }
+   ],
+   "photos": [
+    {
+     "kind": "hen",
+     "file": "leghorn-hen.jpg",
+     "caption": "A White Leghorn hen.",
+     "author": "Stephen Ausmus, USDA ARS",
+     "source_url": "https://commons.wikimedia.org/wiki/File:ARS-White_Leghorn_hen_(cropped).jpg",
+     "license_name": "Public domain",
+     "license_url": "",
+     "attribution_text": "“ARS-White Leghorn hen (cropped).jpg” by Stephen Ausmus, USDA ARS, Public domain, via Wikimedia Commons"
+    }
+   ]
+  },
+  {
+   "slug": "ameraucana",
+   "name": "Ameraucana",
+   "origin": "United States",
+   "egg_color_name": "Blue",
+   "egg_color_category": "blue",
+   "egg_hex": "#A8CCD3",
+   "shell_finish": "satin",
+   "egg_size": "L",
+   "egg_size_note": "Large (McMurray)",
+   "temperament": "Docile and friendly",
+   "broodiness": "Rarely goes broody (seldom sits on eggs to hatch them)",
+   "autosexing": "unknown",
+   "genetics_notes": "Blue shell from the oocyan (O) allele: an EAV-HP retroviral insertion upstream of SLCO1B3 makes the shell gland deposit biliverdin through the whole shell, so the inside is blue too. Dominant.",
+   "breeding_notes": "One copy of the blue allele is enough; crossed onto a brown layer, daughters that inherit it lay green/olive.",
+   "sort_order": 1,
+   "citations": [
+    {
+     "publisher": "McMurray Hatchery",
+     "title": "Ameraucanas",
+     "url": "https://www.mcmurrayhatchery.com/ameraucanas.html",
+     "kind": "hatchery",
+     "supports": "egg_color_name,egg_size,broodiness,temperament",
+     "excerpt": "Egg Color: blue; Egg Size: large; Disposition: good; Broody: not very likely; docile, friendly, quiet",
+     "accessed": "2026-10-15"
+    },
+    {
+     "publisher": "Koops Coops",
+     "title": "Blue Ameraucana",
+     "url": "https://www.koopscoops.com/product/blue-ameraucana/",
+     "kind": "hatchery",
+     "supports": "origin,temperament",
+     "excerpt": "Temperament: docile and friendly. History: originated in the United States.",
+     "accessed": "2026-10-15"
+    }
+   ],
+   "photos": [
+    {
+     "kind": "hen",
+     "file": "ameraucana-hen.jpg",
+     "caption": "An Ameraucana hen.",
+     "author": "VanTucky",
+     "source_url": "https://commons.wikimedia.org/wiki/File:Ameraucana_hen_close-up.JPG",
+     "license_name": "CC BY 1.0",
+     "license_url": "https://creativecommons.org/licenses/by/1.0",
+     "attribution_text": "“Ameraucana hen close-up.JPG” by VanTucky, CC BY 1.0, via Wikimedia Commons"
+    }
+   ]
+  },
+  {
+   "slug": "araucana",
+   "name": "Araucana",
+   "egg_color_name": "Blue",
+   "egg_color_category": "blue",
+   "egg_hex": "#9CC8C9",
+   "shell_finish": "satin",
+   "egg_size": "M",
+   "egg_size_note": "Medium to large (Livestock Conservancy)",
+   "temperament": "Docile",
+   "autosexing": "unknown",
+   "genetics_notes": "Same oocyan/EAV-HP mechanism as other blue layers; the insertion was traced in South American (Mapuche) fowl.",
+   "breeding_notes": "Rumpless and tufted traits are separate from egg color. Livestock Conservancy lists the breed as Critical.",
+   "sort_order": 2,
+   "citations": [
+    {
+     "publisher": "The Livestock Conservancy",
+     "title": "Araucana Chicken",
+     "url": "https://livestockconservancy.org/heritage-breeds/heritage-breeds-list/araucana-chicken/",
+     "kind": "conservancy",
+     "supports": "egg_color_name,egg_size,temperament",
+     "excerpt": "Status: Critical; Egg Color: Blue; Egg Size: Medium to Large; Temperament: Docile",
+     "accessed": "2026-10-15"
+    }
+   ],
+   "photos": [
+    {
+     "kind": "hen",
+     "file": "araucana-hen.jpg",
+     "caption": "A white Araucana hen showing ear-tufts",
+     "author": "User:Anne Cushing",
+     "source_url": "https://commons.wikimedia.org/wiki/File:Araucana_hen_showing_ear_tufts.jpg",
+     "license_name": "Public domain",
+     "license_url": "",
+     "attribution_text": "“Araucana hen showing ear tufts.jpg” by User:Anne Cushing, Public domain, via Wikimedia Commons"
+    },
+    {
+     "kind": "egg",
+     "file": "araucana-egg.jpg",
+     "caption": "A blue egg laid by an Araucana hen, with brown ones.",
+     "author": "Julian Berry from Mid Sussex, UK",
+     "source_url": "https://commons.wikimedia.org/wiki/File:Blue_Araucana_egg.jpg",
+     "license_name": "CC BY-SA 2.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+     "attribution_text": "“Blue Araucana egg.jpg” by Julian Berry from Mid Sussex, UK, CC BY-SA 2.0, via Wikimedia Commons"
+    }
+   ]
+  },
+  {
+   "slug": "cream-legbar",
+   "name": "Cream Legbar",
+   "egg_color_name": "Blue",
+   "egg_color_category": "blue",
+   "egg_hex": "#B2D4C8",
+   "shell_finish": "satin",
+   "egg_size": "M",
+   "egg_size_note": "Medium (McMurray, Koops)",
+   "lay_rate_min": 150,
+   "lay_rate_max": 200,
+   "temperament": "Friendly and calm",
+   "broodiness": "Rarely goes broody (seldom sits on eggs to hatch them)",
+   "autosexing": "yes",
+   "genetics_notes": "Blue via the oocyan allele. Autosexing: chicks can be sexed by down pattern at hatch.",
+   "breeding_notes": "Koops Coops has crossed Cream Legbar with French Cuckoo Marans and on Welsummer to make green-egg layers.",
+   "sort_order": 3,
+   "citations": [
+    {
+     "publisher": "McMurray Hatchery",
+     "title": "Cream Legbars",
+     "url": "https://www.mcmurrayhatchery.com/cream_legbars.html",
+     "kind": "hatchery",
+     "supports": "egg_color_name,egg_size,broodiness,autosexing",
+     "excerpt": "Egg Color: blue; Egg Size: medium; Broody: not very likely; 'one of the most popular auto-sexing breeds'",
+     "accessed": "2026-10-15"
+    },
+    {
+     "publisher": "Koops Coops",
+     "title": "Cream Legbars",
+     "url": "https://www.koopscoops.com/product/cream-legbars/",
+     "kind": "hatchery",
+     "supports": "egg_size,lay_rate,temperament",
+     "excerpt": "Blue egg; Medium; 150-200 per year; friendly and calm",
+     "accessed": "2026-10-15"
+    }
+   ],
+   "photos": [
+    {
+     "kind": "hen",
+     "file": "cream-legbar-hen.jpg",
+     "caption": "Adult Cream Legbar Hen",
+     "author": "Kringln",
+     "source_url": "https://commons.wikimedia.org/wiki/File:Adult_Cream_Legbar_Hen_(cropped).jpg",
+     "license_name": "CC0",
+     "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "attribution_text": "“Adult Cream Legbar Hen (cropped).jpg” by Kringln, CC0, via Wikimedia Commons"
+    }
+   ]
+  },
+  {
+   "slug": "easter-egger",
+   "name": "Easter Egger",
+   "is_cross": true,
+   "egg_color_name": "Blue, green or other (varies by hen)",
+   "egg_color_category": "variable",
+   "egg_hex": "#B7CBA6",
+   "shell_finish": "satin",
+   "egg_size": "M",
+   "egg_size_note": "Medium (Koops)",
+   "lay_rate_min": 200,
+   "lay_rate_max": 250,
+   "temperament": "Not sourced; Koops calls it very beginner-friendly",
+   "broodiness": "Sometimes goes broody (may sit on eggs to hatch them)",
+   "autosexing": "no",
+   "genetics_notes": "Not a breed: a cross of a regular brown layer with a blue layer, so egg color depends on which alleles each hen carries.",
+   "breeding_notes": "Hens from one hatch can lay blue, green or, occasionally, tinted eggs.",
+   "sort_order": 4,
+   "citations": [
+    {
+     "publisher": "Koops Coops",
+     "title": "Easter Eggers",
+     "url": "https://www.koopscoops.com/product/easter-eggers/",
+     "kind": "hatchery",
+     "supports": "egg_color_name,egg_size,lay_rate,temperament,broodiness",
+     "excerpt": "Blue egg; Medium; 200-250 per year; occasionally broody; very beginner-friendly",
+     "accessed": "2026-10-15"
+    },
+    {
+     "publisher": "Koops Coops",
+     "title": "Olive Egger (Easter Egger definition)",
+     "url": "https://www.koopscoops.com/product/olive-egger/",
+     "kind": "hatchery",
+     "supports": "genetics_notes",
+     "excerpt": "Easter Eggers are produced by crossing a regular brown egg layer with a blue egg layer.",
+     "accessed": "2026-10-15"
+    }
+   ],
+   "photos": [
+    {
+     "kind": "hen",
+     "file": "easter-egger-hen.jpg",
+     "caption": "Gem is an Easter Egger from Ideal Poultry, originally sold as a Ameraucana.",
+     "author": "HedgehogWhisperer",
+     "source_url": "https://commons.wikimedia.org/wiki/File:Gem_(Easter_Egger_hen).jpg",
+     "license_name": "CC BY-SA 3.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+     "attribution_text": "“Gem (Easter Egger hen).jpg” by HedgehogWhisperer, CC BY-SA 3.0, via Wikimedia Commons"
+    }
+   ]
+  },
+  {
+   "slug": "olive-egger",
+   "name": "Olive Egger",
+   "is_cross": true,
+   "egg_color_name": "Olive / sage green (can vary)",
+   "egg_color_category": "green",
+   "egg_hex": "#8E9A5C",
+   "speckle_density": 0.15,
+   "speckle_hex": "#4E4A26",
+   "shell_finish": "matte",
+   "egg_size": "XL",
+   "egg_size_note": "Extra large (Koops)",
+   "lay_rate_min": 250,
+   "lay_rate_max": 300,
+   "temperament": "Friendly and adaptable",
+   "broodiness": "Rarely goes broody (seldom sits on eggs to hatch them)",
+   "autosexing": "no",
+   "genetics_notes": "Olive shell: a blue shell (oocyan) with a layer of brown protoporphyrin on top.",
+   "breeding_notes": "Produced from a dark-brown layer × blue layer. Hens can still lay blue or brown, because egg color genes segregate.",
+   "sort_order": 5,
+   "citations": [
+    {
+     "publisher": "Koops Coops",
+     "title": "Olive Egger",
+     "url": "https://www.koopscoops.com/product/olive-egger/",
+     "kind": "hatchery",
+     "supports": "egg_color_name,egg_size,lay_rate,temperament,broodiness,genetics_notes,breeding_notes",
+     "excerpt": "Egg Color: Olive; XLarge; 250-300 per year; 'blue eggs have brown pigment over the top, creating the shade of olive green'",
+     "accessed": "2026-10-15"
+    }
+   ],
+   "photos": []
+  },
+  {
+   "slug": "marans",
+   "name": "Black Copper Marans",
+   "egg_color_name": "Dark brown",
+   "egg_color_category": "dark-brown",
+   "egg_hex": "#6A3A26",
+   "speckle_density": 0.35,
+   "speckle_hex": "#3A190E",
+   "shell_finish": "matte",
+   "egg_size": "L",
+   "egg_size_note": "Large (McMurray, Koops)",
+   "lay_rate_min": 150,
+   "lay_rate_max": 200,
+   "temperament": "Not sourced. McMurray: disposition 'excellent'",
+   "broodiness": "Sometimes goes broody (may sit on eggs to hatch them)",
+   "autosexing": "unknown",
+   "genetics_notes": "Dark color is protoporphyrin IX deposited late, mostly in the outer shell and cuticle, so it can partly rub off. Color usually fades over a laying season.",
+   "breeding_notes": "Common brown parent for olive eggers.",
+   "sort_order": 6,
+   "citations": [
+    {
+     "publisher": "McMurray Hatchery",
+     "title": "Black Copper Marans",
+     "url": "https://www.mcmurrayhatchery.com/black_copper_marans.html",
+     "kind": "hatchery",
+     "supports": "egg_color_name,egg_size,broodiness,temperament",
+     "excerpt": "Egg Color: dark brown; Egg Size: large; Disposition: excellent; Broody: somewhat likely",
+     "accessed": "2026-10-15"
+    },
+    {
+     "publisher": "Koops Coops",
+     "title": "Black Copper Maran",
+     "url": "https://www.koopscoops.com/product/black-copper-maran/",
+     "kind": "hatchery",
+     "supports": "lay_rate,egg_size",
+     "excerpt": "Dark brown egg; Large; 150-200 per year",
+     "accessed": "2026-10-15"
+    }
+   ],
+   "photos": [
+    {
+     "kind": "hen",
+     "file": "marans-hen.jpg",
+     "caption": "Marans hen",
+     "author": "Nienetwiler",
+     "source_url": "https://commons.wikimedia.org/wiki/File:Maranshenne1.jpg",
+     "license_name": "CC BY 2.5 ch",
+     "license_url": "https://creativecommons.org/licenses/by/2.5/ch/deed.en",
+     "attribution_text": "“Maranshenne1.jpg” by Nienetwiler, CC BY 2.5 ch, via Wikimedia Commons"
+    },
+    {
+     "kind": "egg",
+     "file": "marans-egg.jpg",
+     "caption": "Marans eggs.",
+     "author": "Thomon",
+     "source_url": "https://commons.wikimedia.org/wiki/File:Marans_eggs.jpg",
+     "license_name": "CC BY-SA 4.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+     "attribution_text": "“Marans eggs.jpg” by Thomon, CC BY-SA 4.0, via Wikimedia Commons"
+    }
+   ]
+  },
+  {
+   "slug": "welsummer",
+   "name": "Welsummer",
+   "origin": "Netherlands",
+   "egg_color_name": "Dark brown, often speckled",
+   "egg_color_category": "dark-brown",
+   "egg_hex": "#9A5536",
+   "speckle_density": 0.8,
+   "speckle_hex": "#4A1F0F",
+   "shell_finish": "matte",
+   "egg_size": "L",
+   "egg_size_note": "Large (McMurray)",
+   "lay_rate_min": 220,
+   "lay_rate_max": 280,
+   "temperament": "Docile",
+   "broodiness": "Sometimes goes broody (may sit on eggs to hatch them)",
+   "autosexing": "no",
+   "genetics_notes": "Brown pigment (protoporphyrin IX) applied in the shell gland; speckling is extra pigment laid on near the end.",
+   "breeding_notes": "Koops Coops has crossed Welsummer with Cream Legbar to try for speckled green eggs.",
+   "sort_order": 7,
+   "citations": [
+    {
+     "publisher": "McMurray Hatchery",
+     "title": "Welsummer",
+     "url": "https://www.mcmurrayhatchery.com/welsummer.html",
+     "kind": "hatchery",
+     "supports": "origin,egg_color_name,egg_size,lay_rate,temperament,broodiness,autosexing",
+     "excerpt": "Originated in Holland; docile; dark brown eggs; large; 220-280 eggs per year; somewhat likely broody; not auto sexing",
+     "accessed": "2026-10-15"
+    }
+   ],
+   "photos": [
+    {
+     "kind": "hen",
+     "file": "welsummer-hen.jpg",
+     "caption": "A Welsummer pullet.",
+     "author": "Josh Larios from Seattle, US",
+     "source_url": "https://commons.wikimedia.org/wiki/File:Welsummer_hen.jpg",
+     "license_name": "CC BY-SA 2.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+     "attribution_text": "“Welsummer hen.jpg” by Josh Larios from Seattle, US, CC BY-SA 2.0, via Wikimedia Commons"
+    },
+    {
+     "kind": "egg",
+     "file": "welsummer-egg.jpg",
+     "caption": "A typical terracotta-coloured Welsummer chicken egg",
+     "author": "Officially_Mr_X",
+     "source_url": "https://commons.wikimedia.org/wiki/File:Welsummer_Chicken_Egg.JPG",
+     "license_name": "CC BY-SA 4.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+     "attribution_text": "“Welsummer Chicken Egg.JPG” by Officially_Mr_X, CC BY-SA 4.0, via Wikimedia Commons"
+    }
+   ]
+  },
+  {
+   "slug": "barnevelder",
+   "name": "Barnevelder",
+   "egg_color_name": "Dark brown",
+   "egg_color_category": "dark-brown",
+   "egg_hex": "#8A5A3F",
+   "speckle_density": 0.12,
+   "speckle_hex": "#4A2618",
+   "shell_finish": "matte",
+   "egg_size": "L",
+   "egg_size_note": "Large (Koops)",
+   "lay_rate_min": 150,
+   "lay_rate_max": 200,
+   "temperament": "Calm and friendly",
+   "broodiness": "Sometimes goes broody (may sit on eggs to hatch them)",
+   "autosexing": "unknown",
+   "genetics_notes": "Brown shell from protoporphyrin IX (see glossary).",
+   "breeding_notes": "",
+   "sort_order": 8,
+   "citations": [
+    {
+     "publisher": "Koops Coops",
+     "title": "Barnevelder",
+     "url": "https://www.koopscoops.com/product/barnevelder/",
+     "kind": "hatchery",
+     "supports": "egg_color_name,egg_size,lay_rate,temperament,broodiness",
+     "excerpt": "Dark brown egg; Large; 150-200 per year; occasionally broody; calm and friendly",
+     "accessed": "2026-10-15"
+    }
+   ],
+   "photos": [
+    {
+     "kind": "hen",
+     "file": "barnevelder-hen.jpg",
+     "caption": "Barnevelder Hen. Photo by Morgan Leigh morgan at wirejunkie dot com",
+     "author": "Morgan Leigh",
+     "source_url": "https://commons.wikimedia.org/wiki/File:Barnevelder_hen.jpg",
+     "license_name": "CC BY-SA 2.5",
+     "license_url": "https://creativecommons.org/licenses/by-sa/2.5",
+     "attribution_text": "“Barnevelder hen.jpg” by Morgan Leigh, CC BY-SA 2.5, via Wikimedia Commons"
+    },
+    {
+     "kind": "egg",
+     "file": "barnevelder-egg.jpg",
+     "caption": "Barnevelder chicken eggs. Photo by MOrgan Leigh morgan at wirejunkie dot com",
+     "author": "Morgan Leigh",
+     "source_url": "https://commons.wikimedia.org/wiki/File:Barnevelder_eggs.jpg",
+     "license_name": "CC BY-SA 2.5",
+     "license_url": "https://creativecommons.org/licenses/by-sa/2.5",
+     "attribution_text": "“Barnevelder eggs.jpg” by Morgan Leigh, CC BY-SA 2.5, via Wikimedia Commons"
+    }
+   ]
+  },
+  {
+   "slug": "penedesenca",
+   "name": "Penedesenca",
+   "egg_color_name": "Very dark brown",
+   "egg_color_category": "dark-brown",
+   "egg_hex": "#5E3022",
+   "speckle_density": 0.2,
+   "speckle_hex": "#2E140B",
+   "shell_finish": "matte",
+   "egg_size": "XL",
+   "egg_size_note": "Extra large (Koops)",
+   "lay_rate_min": 200,
+   "lay_rate_max": 250,
+   "temperament": "Not sourced; Koops calls it good for beginners",
+   "broodiness": "Sometimes goes broody (may sit on eggs to hatch them)",
+   "autosexing": "unknown",
+   "genetics_notes": "Brown shell from protoporphyrin IX (see glossary).",
+   "breeding_notes": "Figures come from one hatchery and haven't been confirmed elsewhere.",
+   "sort_order": 9,
+   "citations": [
+    {
+     "publisher": "Koops Coops",
+     "title": "Crele Penedesenca",
+     "url": "https://www.koopscoops.com/product/crele-pendesenca/",
+     "kind": "hatchery",
+     "supports": "egg_color_name,egg_size,lay_rate,temperament,broodiness",
+     "excerpt": "Dark brown egg; XLarge; 200-250 per year; occasionally broody; good for beginners",
+     "accessed": "2026-10-15"
+    }
+   ],
+   "photos": []
+  },
+  {
+   "slug": "orpington",
+   "name": "Buff Orpington",
+   "egg_color_name": "Light brown to brown",
+   "egg_color_category": "light-brown",
+   "egg_hex": "#D6AE86",
+   "shell_finish": "satin",
+   "egg_size": "L",
+   "egg_size_note": "Large (McMurray); large to XL (Conservancy); XL (Koops)",
+   "lay_rate_min": 200,
+   "lay_rate_max": 250,
+   "temperament": "Calm, friendly",
+   "broodiness": "Very often goes broody (likes to sit on and hatch eggs)",
+   "autosexing": "unknown",
+   "genetics_notes": "Brown shell from protoporphyrin IX (see glossary).",
+   "breeding_notes": "Very likely to go broody, so often used to hatch other breeds' eggs.",
+   "sort_order": 10,
+   "citations": [
+    {
+     "publisher": "The Livestock Conservancy",
+     "title": "Orpington Chicken",
+     "url": "https://livestockconservancy.org/heritage-breeds/heritage-breeds-list/orpington-chicken/",
+     "kind": "conservancy",
+     "supports": "egg_color_name,egg_size,temperament",
+     "excerpt": "Egg Color: Brown; Egg Size: Large to Extra Large; Temperament: Calm, friendly disposition",
+     "accessed": "2026-10-15"
+    },
+    {
+     "publisher": "McMurray Hatchery",
+     "title": "Buff Orpingtons",
+     "url": "https://www.mcmurrayhatchery.com/buff_orpingtons.html",
+     "kind": "hatchery",
+     "supports": "egg_color_name,egg_size,broodiness",
+     "excerpt": "brown; large; Broody: extremely likely",
+     "accessed": "2026-10-15"
+    },
+    {
+     "publisher": "Koops Coops",
+     "title": "Buff Orpington",
+     "url": "https://www.koopscoops.com/product/buff-orpington/",
+     "kind": "hatchery",
+     "supports": "egg_color_name,lay_rate",
+     "excerpt": "Light brown egg; XLarge; 200-250 per year",
+     "accessed": "2026-10-15"
+    }
+   ],
+   "photos": [
+    {
+     "kind": "hen",
+     "file": "orpington-hen.jpg",
+     "caption": "A Buff Orpington Hen in Sunlight",
+     "author": "Champdug",
+     "source_url": "https://commons.wikimedia.org/wiki/File:A_Buff_Orpington_Hen_in_Sunlight.jpg",
+     "license_name": "CC BY-SA 4.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+     "attribution_text": "“A Buff Orpington Hen in Sunlight.jpg” by Champdug, CC BY-SA 4.0, via Wikimedia Commons"
+    }
+   ]
+  },
+  {
+   "slug": "plymouth-rock",
+   "name": "Barred Plymouth Rock",
+   "origin": "United States (exhibited in Boston, 1849)",
+   "egg_color_name": "Brown",
+   "egg_color_category": "brown",
+   "egg_hex": "#C08C63",
+   "shell_finish": "satin",
+   "egg_size": "L",
+   "egg_size_note": "Sources differ: medium (McMurray), large (Conservancy), XL (Koops)",
+   "lay_rate_min": 200,
+   "lay_rate_max": 280,
+   "temperament": "Calm, docile",
+   "broodiness": "Sources differ: rarely goes broody (McMurray) or often broody (Koops)",
+   "autosexing": "unknown",
+   "genetics_notes": "Brown shell from protoporphyrin IX (see glossary).",
+   "breeding_notes": "",
+   "sort_order": 11,
+   "citations": [
+    {
+     "publisher": "The Livestock Conservancy",
+     "title": "Plymouth Rock Chicken",
+     "url": "https://livestockconservancy.org/heritage-breeds/heritage-breeds-list/plymouth-rock-chicken/",
+     "kind": "conservancy",
+     "supports": "origin,egg_color_name,egg_size,temperament",
+     "excerpt": "Developed in America in the mid-19th century, first exhibited in Boston in 1849; Brown; Large; Calm, Docile",
+     "accessed": "2026-10-15"
+    },
+    {
+     "publisher": "McMurray Hatchery",
+     "title": "Barred Rocks",
+     "url": "https://www.mcmurrayhatchery.com/barred_rocks.html",
+     "kind": "hatchery",
+     "supports": "egg_size,lay_rate,broodiness",
+     "excerpt": "brown; medium; average 225 per year; 'about 220-280 eggs a year'; not very likely broody",
+     "accessed": "2026-10-15"
+    },
+    {
+     "publisher": "Koops Coops",
+     "title": "Barred Rock",
+     "url": "https://www.koopscoops.com/product/barred-rock-2/",
+     "kind": "hatchery",
+     "supports": "lay_rate,egg_size,broodiness",
+     "excerpt": "Brown egg; XLarge; 200-250 per year; broody",
+     "accessed": "2026-10-15"
+    }
+   ],
+   "photos": [
+    {
+     "kind": "hen",
+     "file": "plymouth-rock-hen.jpg",
+     "caption": "Barred Plymout Rock hen",
+     "author": "Earth'sbuddy",
+     "source_url": "https://commons.wikimedia.org/wiki/File:Barred_Rock_hen.JPG",
+     "license_name": "CC BY-SA 3.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+     "attribution_text": "“Barred Rock hen.JPG” by Earth'sbuddy, CC BY-SA 3.0, via Wikimedia Commons"
+    },
+    {
+     "kind": "egg",
+     "file": "plymouth-rock-egg.jpg",
+     "caption": "Barred Plymouth Rock egg (cropped).jpg",
+     "author": "See source page",
+     "source_url": "https://commons.wikimedia.org/wiki/File:Barred_Plymouth_Rock_egg_(cropped).jpg",
+     "license_name": "CC BY-SA 3.0",
+     "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "attribution_text": "“Barred Plymouth Rock egg (cropped).jpg” by See source page, CC BY-SA 3.0, via Wikimedia Commons"
+    }
+   ]
+  },
+  {
+   "slug": "rhode-island-red",
+   "name": "Rhode Island Red",
+   "egg_color_name": "Brown",
+   "egg_color_category": "brown",
+   "egg_hex": "#B37B52",
+   "shell_finish": "satin",
+   "egg_size": "L",
+   "egg_size_note": "Large (McMurray, Conservancy); XL (Koops)",
+   "lay_rate_min": 238,
+   "lay_rate_max": 300,
+   "temperament": "Calm",
+   "broodiness": "Rarely goes broody (production strain; seldom sits on eggs to hatch them)",
+   "autosexing": "unknown",
+   "genetics_notes": "Brown shell from protoporphyrin IX (see glossary).",
+   "breeding_notes": "McMurray's flock is a production strain selected for lay and less broodiness; heritage lines may differ.",
+   "sort_order": 12,
+   "citations": [
+    {
+     "publisher": "The Livestock Conservancy",
+     "title": "Rhode Island Red Chicken",
+     "url": "https://livestockconservancy.org/heritage-breeds/heritage-breeds-list/rhode-island-red-chicken/",
+     "kind": "conservancy",
+     "supports": "egg_color_name,egg_size,temperament",
+     "excerpt": "Brown; Large; Temperament: Calm",
+     "accessed": "2026-10-15"
+    },
+    {
+     "publisher": "McMurray Hatchery",
+     "title": "Rhode Island Reds",
+     "url": "https://www.mcmurrayhatchery.com/rhode_island_reds.html",
+     "kind": "hatchery",
+     "supports": "lay_rate,broodiness,breeding_notes",
+     "excerpt": "Average eggs per year: 238; Broody: not at all likely; production strain",
+     "accessed": "2026-10-15"
+    },
+    {
+     "publisher": "Koops Coops",
+     "title": "RI Red",
+     "url": "https://www.koopscoops.com/product/ri-red/",
+     "kind": "hatchery",
+     "supports": "lay_rate",
+     "excerpt": "Brown; XLarge; 250-300 per year",
+     "accessed": "2026-10-15"
+    }
+   ],
+   "photos": [
+    {
+     "kind": "hen",
+     "file": "rhode-island-red-hen.jpg",
+     "caption": "Rhode Island Red hen",
+     "author": "Evelyn Simak",
+     "source_url": "https://commons.wikimedia.org/wiki/File:Rhode_Island_Red_hen_-_geograph.org.uk_-_5455945.jpg",
+     "license_name": "CC BY-SA 2.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+     "attribution_text": "“Rhode Island Red hen - geograph.org.uk - 5455945.jpg” by Evelyn Simak, CC BY-SA 2.0, via Wikimedia Commons"
+    }
+   ]
+  },
+  {
+   "slug": "sussex",
+   "name": "Sussex",
+   "egg_color_name": "Tan to brown",
+   "egg_color_category": "light-brown",
+   "egg_hex": "#D3B08A",
+   "shell_finish": "satin",
+   "egg_size": "L",
+   "egg_size_note": "Large (all three sources)",
+   "lay_rate_min": 150,
+   "lay_rate_max": 250,
+   "temperament": "Calm and curious",
+   "broodiness": "Often goes broody per McMurray (likes to sit on and hatch eggs); sometimes per Koops",
+   "autosexing": "unknown",
+   "genetics_notes": "Brown shell from protoporphyrin IX (see glossary).",
+   "breeding_notes": "Photo shows a Light Sussex. Figures are for the Speckled Sussex.",
+   "sort_order": 13,
+   "citations": [
+    {
+     "publisher": "The Livestock Conservancy",
+     "title": "Sussex Chicken",
+     "url": "https://livestockconservancy.org/heritage-breeds/heritage-breeds-list/sussex-chicken/",
+     "kind": "conservancy",
+     "supports": "egg_color_name,egg_size,temperament",
+     "excerpt": "Tan to Brown; Large; Calm and Curious",
+     "accessed": "2026-10-15"
+    },
+    {
+     "publisher": "McMurray Hatchery",
+     "title": "Speckled Sussex",
+     "url": "https://www.mcmurrayhatchery.com/speckled_sussex.html",
+     "kind": "hatchery",
+     "supports": "lay_rate,broodiness",
+     "excerpt": "151-220 eggs per year; very likely broody",
+     "accessed": "2026-10-15"
+    },
+    {
+     "publisher": "Koops Coops",
+     "title": "Speckled Sussex",
+     "url": "https://www.koopscoops.com/product/speckled-sussex/",
+     "kind": "hatchery",
+     "supports": "lay_rate",
+     "excerpt": "Brown; Large; 200-250 per year",
+     "accessed": "2026-10-15"
+    }
+   ],
+   "photos": [
+    {
+     "kind": "hen",
+     "file": "sussex-hen.jpg",
+     "caption": "my sussex chicken",
+     "author": "Smudger94",
+     "source_url": "https://commons.wikimedia.org/wiki/File:Light_Sussex_Hen.jpg",
+     "license_name": "CC BY-SA 3.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+     "attribution_text": "“Light Sussex Hen.jpg” by Smudger94, CC BY-SA 3.0, via Wikimedia Commons"
+    }
+   ]
+  },
+  {
+   "slug": "silkie",
+   "name": "Silkie",
+   "egg_color_name": "White (McMurray)",
+   "egg_color_category": "white",
+   "egg_hex": "#F0E9DA",
+   "shell_finish": "satin",
+   "egg_size": "S",
+   "egg_size_note": "Small",
+   "lay_rate_min": 150,
+   "lay_rate_max": 200,
+   "temperament": "Not sourced. McMurray: disposition 'best'",
+   "broodiness": "Very often goes broody (likes to sit on and hatch eggs)",
+   "autosexing": "unknown",
+   "genetics_notes": "",
+   "breeding_notes": "Very likely to go broody; often used to hatch other birds' eggs.",
+   "sort_order": 14,
+   "citations": [
+    {
+     "publisher": "McMurray Hatchery",
+     "title": "Bantam White Silkies",
+     "url": "https://www.mcmurrayhatchery.com/bantam_white_silkies.html",
+     "kind": "hatchery",
+     "supports": "egg_color_name,egg_size,temperament,broodiness",
+     "excerpt": "Egg Color: white; small; Disposition: best; Broody: extremely likely",
+     "accessed": "2026-10-15"
+    },
+    {
+     "publisher": "Koops Coops",
+     "title": "Assorted Silkies",
+     "url": "https://www.koopscoops.com/product/assorted-silkies/",
+     "kind": "hatchery",
+     "supports": "lay_rate",
+     "excerpt": "Small; 150-200 per year; broody",
+     "accessed": "2026-10-15"
+    }
+   ],
+   "photos": [
+    {
+     "kind": "hen",
+     "file": "silkie-hen.jpg",
+     "caption": "A trio of hens, all Silkies and/or Silkie-crosses.",
+     "author": "Kyknoord from Cape Town, South Africa",
+     "source_url": "https://commons.wikimedia.org/wiki/File:Silkie_hen_trio.jpg",
+     "license_name": "CC BY 2.0",
+     "license_url": "https://creativecommons.org/licenses/by/2.0",
+     "attribution_text": "“Silkie hen trio.jpg” by Kyknoord from Cape Town, South Africa, CC BY 2.0, via Wikimedia Commons"
+    },
+    {
+     "kind": "egg",
+     "file": "silkie-egg.jpg",
+     "caption": "Silkie eggs",
+     "author": "Fumikas Sagisavas",
+     "source_url": "https://commons.wikimedia.org/wiki/File:Silkie_eggs.jpg",
+     "license_name": "CC0",
+     "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "attribution_text": "“Silkie eggs.jpg” by Fumikas Sagisavas, CC0, via Wikimedia Commons"
+    }
+   ]
+  },
+  {
+   "slug": "australorp",
+   "name": "Black Australorp",
+   "origin": "Australia (from English Black Orpingtons)",
+   "egg_color_name": "Light brown to brown",
+   "egg_color_category": "light-brown",
+   "egg_hex": "#CDA07B",
+   "shell_finish": "satin",
+   "egg_size": "L",
+   "egg_size_note": "Large (McMurray, Koops); medium to large (Conservancy)",
+   "lay_rate_min": 226,
+   "lay_rate_max": 300,
+   "temperament": "Active, yet gentle",
+   "broodiness": "Sources differ: rarely goes broody (McMurray) or often broody (Koops)",
+   "autosexing": "unknown",
+   "genetics_notes": "Brown shell from protoporphyrin IX (see glossary).",
+   "breeding_notes": "",
+   "sort_order": 15,
+   "citations": [
+    {
+     "publisher": "The Livestock Conservancy",
+     "title": "Australorp Chicken",
+     "url": "https://livestockconservancy.org/heritage-breeds/heritage-breeds-list/australorp-chicken/",
+     "kind": "conservancy",
+     "supports": "egg_color_name,egg_size,temperament",
+     "excerpt": "Tinted to Light Brown; Medium to Large; Active, yet gentle",
+     "accessed": "2026-10-15"
+    },
+    {
+     "publisher": "McMurray Hatchery",
+     "title": "Black Australorps",
+     "url": "https://www.mcmurrayhatchery.com/black_australorps.html",
+     "kind": "hatchery",
+     "supports": "origin,egg_color_name,lay_rate,broodiness",
+     "excerpt": "Developed from Black Orpingtons imported from England; brown; large; average 226 per year",
+     "accessed": "2026-10-15"
+    },
+    {
+     "publisher": "Koops Coops",
+     "title": "Black Australorp",
+     "url": "https://www.koopscoops.com/product/black-australorp/",
+     "kind": "hatchery",
+     "supports": "lay_rate",
+     "excerpt": "Brown; Large; 250-300 per year",
+     "accessed": "2026-10-15"
+    }
+   ],
+   "photos": [
+    {
+     "kind": "hen",
+     "file": "australorp-hen.jpg",
+     "caption": "A black australorp hen with her foot inside her body to keep warm",
+     "author": "Sigma0944",
+     "source_url": "https://commons.wikimedia.org/wiki/File:Black_australorp_hen.jpg",
+     "license_name": "CC0",
+     "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "attribution_text": "“Black australorp hen.jpg” by Sigma0944, CC0, via Wikimedia Commons"
+    }
+   ]
+  },
+  {
+   "slug": "faverolles",
+   "name": "Salmon Faverolles",
+   "egg_color_name": "Cream / tinted to light brown",
+   "egg_color_category": "cream",
+   "egg_hex": "#E1C8A6",
+   "shell_finish": "satin",
+   "egg_size": "M",
+   "egg_size_note": "Medium (McMurray, Koops); medium to large (Conservancy)",
+   "lay_rate_min": 150,
+   "lay_rate_max": 200,
+   "temperament": "Docile, gentle, friendly",
+   "broodiness": "Very often goes broody (likes to sit on and hatch eggs)",
+   "autosexing": "unknown",
+   "genetics_notes": "Light shell: little protoporphyrin is deposited.",
+   "breeding_notes": "Conservancy status: Watch.",
+   "sort_order": 16,
+   "citations": [
+    {
+     "publisher": "The Livestock Conservancy",
+     "title": "Faverolles Chicken",
+     "url": "https://livestockconservancy.org/heritage-breeds/heritage-breeds-list/faverolles-chicken/",
+     "kind": "conservancy",
+     "supports": "egg_color_name,egg_size,temperament",
+     "excerpt": "Status: Watch; Tinted to Light Brown; Medium to Large; Active, yet gentle",
+     "accessed": "2026-10-15"
+    },
+    {
+     "publisher": "McMurray Hatchery",
+     "title": "Salmon Faverolles",
+     "url": "https://www.mcmurrayhatchery.com/salmon_faverolles.html",
+     "kind": "hatchery",
+     "supports": "egg_color_name,egg_size,broodiness",
+     "excerpt": "cream; medium; Broody: extremely likely",
+     "accessed": "2026-10-15"
+    },
+    {
+     "publisher": "Koops Coops",
+     "title": "Salmon Faverolles",
+     "url": "https://www.koopscoops.com/product/salmon-faverolles/",
+     "kind": "hatchery",
+     "supports": "lay_rate,temperament",
+     "excerpt": "Light brown; Medium; 150-200 per year; docile, gentle, friendly",
+     "accessed": "2026-10-15"
+    }
+   ],
+   "photos": [
+    {
+     "kind": "hen",
+     "file": "faverolles-hen.jpg",
+     "caption": "A Salmon Faverolle hen at Collingwood Children's Farm",
+     "author": "Fernando de Sousa from Melbourne, Australia",
+     "source_url": "https://commons.wikimedia.org/wiki/File:Salmon_Faverolle_hen_headshot.jpg",
+     "license_name": "CC BY-SA 2.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+     "attribution_text": "“Salmon Faverolle hen headshot.jpg” by Fernando de Sousa from Melbourne, Australia, CC BY-SA 2.0, via Wikimedia Commons"
+    }
+   ]
+  }
+ ],
+ "general_citations": [
+  {
+   "key": "wang2013",
+   "accessed": "2026-10-15",
+   "publisher": "PLOS Genetics",
+   "title": "Wang Z. et al. (2013) An EAV-HP insertion in 5′ flanking region of SLCO1B3 causes blue eggshell in the chicken",
+   "url": "https://doi.org/10.1371/journal.pgen.1003183",
+   "kind": "peer-reviewed",
+   "supports": "genetics_notes",
+   "excerpt": "Blue eggshell (oocyan) is caused by an EAV-HP insertion that up-regulates SLCO1B3 in the shell gland, increasing biliverdin uptake."
+  },
+  {
+   "key": "wragg2013",
+   "accessed": "2026-10-15",
+   "publisher": "PLOS ONE",
+   "title": "Wragg D. et al. (2013) Endogenous retrovirus EAV-HP linked to blue egg phenotype in Mapuche fowl",
+   "url": "https://doi.org/10.1371/journal.pone.0071393",
+   "kind": "peer-reviewed",
+   "supports": "genetics_notes",
+   "excerpt": "Independent confirmation of the EAV-HP insertion in South American blue-egg fowl."
+  },
+  {
+   "key": "samiullah2015",
+   "accessed": "2026-10-15",
+   "publisher": "Poultry Science",
+   "title": "Samiullah S., Roberts J.R., Chousalkar K. (2015) Eggshell color in brown-egg laying hens — a review",
+   "url": "https://doi.org/10.3382/ps/pev202",
+   "kind": "peer-reviewed",
+   "supports": "genetics_notes",
+   "excerpt": "Brown color is protoporphyrin IX, concentrated in the outer shell and cuticle; color intensity tends to decline with hen age."
+  },
+  {
+   "key": "lc-heritage",
+   "accessed": "2026-10-15",
+   "publisher": "The Livestock Conservancy",
+   "title": "Heritage chicken definition",
+   "url": "https://livestockconservancy.org/heritage-breeds/heritage-breeds-list/",
+   "kind": "conservancy",
+   "supports": "glossary",
+   "excerpt": "Conservation priority list and heritage breed definitions."
+  }
+ ],
+ "glossary": [
+  {
+   "term": "Oocyan (O) allele",
+   "definition": "The dominant blue-eggshell allele. One copy makes the whole shell blue, inside and out.",
+   "cite": "wang2013"
+  },
+  {
+   "term": "SLCO1B3",
+   "definition": "A transporter gene. The blue-shell insertion switches it on in the shell gland so that biliverdin is taken up into the shell.",
+   "cite": "wang2013"
+  },
+  {
+   "term": "EAV-HP",
+   "definition": "An endogenous avian retrovirus. Its insertion near SLCO1B3 is the cause of blue eggs, found in both Chinese and Mapuche fowl.",
+   "cite": "wragg2013"
+  },
+  {
+   "term": "Biliverdin",
+   "definition": "The blue-green pigment in blue eggshells.",
+   "cite": "wang2013"
+  },
+  {
+   "term": "Protoporphyrin IX",
+   "definition": "The brown pigment, laid mainly in the outer shell and cuticle. It usually lightens as a hen ages.",
+   "cite": "samiullah2015"
+  },
+  {
+   "term": "Cuticle / bloom",
+   "definition": "The thin organic coat on a freshly laid egg. On brown eggs it carries much of the pigment.",
+   "cite": "samiullah2015"
+  },
+  {
+   "term": "Olive egg",
+   "definition": "A blue shell with brown pigment over it. Usually from a dark-brown × blue cross.",
+   "cite": "kc:olive-egger"
+  },
+  {
+   "term": "Easter Egger",
+   "definition": "A cross of a regular brown layer and a blue layer, not a recognized breed. Egg color varies from hen to hen.",
+   "cite": "kc:olive-egger"
+  },
+  {
+   "term": "Autosexing",
+   "definition": "A breed whose chicks can be sexed at hatch by down color or pattern, e.g. Cream Legbar.",
+   "cite": "mm:cream-legbar"
+  },
+  {
+   "term": "Broody",
+   "definition": "A broody hen wants to sit on eggs and hatch them. Breeds differ: some rarely go broody, others often do. Hatcheries rate how likely each breed is.",
+   "cite": "mm:orpington"
+  },
+  {
+   "term": "Heritage breed",
+   "definition": "A traditional breed tracked on The Livestock Conservancy priority list (Critical, Watch, Recovering, etc.).",
+   "cite": "lc-heritage"
+  }
+ ],
+ "pairings": [
+  {
+   "a": "ameraucana",
+   "b": "marans",
+   "cat": "green",
+   "color": "Olive green",
+   "explanation": "Purebred Ameraucanas carry two copies of the dominant blue allele, so every first-generation daughter gets one and lays a blue shell under heavy brown pigment: olive. Brown-only layers can appear in later generations.",
+   "confidence": "sourced",
+   "cite": "kc:olive-egger",
+   "variety_note": "",
+   "parent_b_label": "",
+   "offspring": {
+    "offspring_hex": "#7E8A4C",
+    "offspring_speckle_density": 0.15,
+    "offspring_speckle_hex": "#3E3A1C",
+    "offspring_finish": "matte"
+   }
+  },
+  {
+   "a": "cream-legbar",
+   "b": "marans",
+   "cat": "green",
+   "color": "Sage to olive green",
+   "explanation": "Koops Coops crossed Cream Legbar with French Cuckoo Marans for olive eggers. The shade varies between sage and olive.",
+   "confidence": "sourced",
+   "cite": "kc:olive-egger",
+   "variety_note": "The source used French Cuckoo Marans, not Black Copper Marans.",
+   "parent_b_label": "French Cuckoo Marans",
+   "offspring": {
+    "offspring_hex": "#93A36C",
+    "offspring_speckle_density": 0.1,
+    "offspring_speckle_hex": "#4A4424",
+    "offspring_finish": "satin"
+   }
+  },
+  {
+   "a": "cream-legbar",
+   "b": "welsummer",
+   "cat": "green",
+   "color": "Green, possibly speckled",
+   "explanation": "Koops Coops crossed these to aim for speckled green eggs. Speckling is not guaranteed.",
+   "confidence": "sourced",
+   "cite": "kc:olive-egger",
+   "variety_note": "",
+   "parent_b_label": "",
+   "offspring": {
+    "offspring_hex": "#8C9A5E",
+    "offspring_speckle_density": 0.6,
+    "offspring_speckle_hex": "#463A1A",
+    "offspring_finish": "matte"
+   }
+  },
+  {
+   "a": "ameraucana",
+   "b": "rhode-island-red",
+   "cat": "variable",
+   "color": "Blue/green mix (Easter Egger type)",
+   "explanation": "Crossing a brown layer with a blue layer produces Easter Eggers. Egg color varies from hen to hen.",
+   "confidence": "sourced",
+   "cite": "kc:olive-egger",
+   "variety_note": "",
+   "parent_b_label": "",
+   "offspring": {
+    "offspring_hex": "#B3C6A8",
+    "offspring_speckle_density": 0,
+    "offspring_speckle_hex": "#4A3A1C",
+    "offspring_finish": "satin"
+   }
+  },
+  {
+   "a": "araucana",
+   "b": "leghorn",
+   "cat": "blue",
+   "color": "Blue",
+   "explanation": "Leghorns add no brown pigment, so daughters carrying the dominant blue allele should lay blue (inferred from genetics, not reported by a breeder).",
+   "confidence": "inferred",
+   "cite": "wang2013",
+   "variety_note": "",
+   "parent_b_label": "",
+   "offspring": {
+    "offspring_hex": "#A8CDD2",
+    "offspring_speckle_density": 0,
+    "offspring_speckle_hex": "#4A3A1C",
+    "offspring_finish": "satin"
+   }
+  }
+ ],
+ "genetic_links": {
+  "blue": [
+   "ameraucana",
+   "araucana",
+   "cream-legbar",
+   "easter-egger",
+   "olive-egger"
+  ],
+  "brown": [
+   "australorp",
+   "barnevelder",
+   "faverolles",
+   "marans",
+   "olive-egger",
+   "orpington",
+   "penedesenca",
+   "plymouth-rock",
+   "rhode-island-red",
+   "sussex",
+   "welsummer"
+  ]
+ }
+}

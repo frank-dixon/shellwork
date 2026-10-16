@@ -1,0 +1,10 @@
+<table class="spec">
+<tr><th scope="row">Egg color</th><td>{{ b.egg_color_name }}</td></tr>
+<tr><th scope="row">Egg size</th><td>{{ b.get_egg_size_display }}{% if b.egg_size_note and long %} <small>· {{ b.egg_size_note }}</small>{% endif %}</td></tr>
+<tr><th scope="row">Egg shape</th><td>{{ b.egg_shape }}{% if b.shape_confidence == 'unsourced' %} <small>· not sourced</small>{% endif %}</td></tr>
+<tr><th scope="row">Eggs per year</th><td>{{ b.lay_rate }}</td></tr>
+<tr><th scope="row">Temperament</th><td>{{ b.temperament|default:"Not sourced" }}</td></tr>
+<tr><th scope="row"><a class="gl" href="{% url 'shellwork:glossary' %}#broody" title="What does broody mean?">Broodiness</a></th><td>{{ b.broodiness|default:"Not sourced" }}</td></tr>
+{% if long %}<tr><th scope="row">Autosexing</th><td>{{ b.get_autosexing_display }}</td></tr>
+<tr><th scope="row">Origin</th><td>{{ b.origin|default:"Not sourced" }}</td></tr>{% endif %}
+</table>

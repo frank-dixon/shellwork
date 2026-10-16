@@ -1,0 +1,20 @@
+{% load static %}<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{% block title %}Shellwork: chicken breeds by egg color, size and shape{% endblock %}</title>
+<meta name="description" content="{% block desc %}Chicken breeds by egg shell color, size and shape, with sources and openly licensed photos.{% endblock %}">
+<meta name="theme-color" content="#18191B"><link rel="manifest" href="{% url 'shellwork:manifest' %}"><link rel="icon" href="{% static 'shellwork/icons/icon-192.png' %}">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;800&family=Azeret+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'shellwork/css/shellwork.css' %}"></head>
+<body class="{% block bodyclass %}{% endblock %}">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><a class="top__brand" href="{% url 'shellwork:index' %}">Shell<span>work</span></a>
+<nav class="top__nav" aria-label="Main"><a href="{% url 'shellwork:index' %}#file">Breeds</a><a href="{% url 'shellwork:helper' %}">Breeding for egg color</a><a href="{% url 'shellwork:glossary' %}">Glossary</a><a href="{% url 'shellwork:sources' %}">Sources</a></nav></header>
+<main id="main">{% block main %}{% endblock %}</main>
+<aside class="tray" id="tray" hidden aria-live="polite"><span class="tray__label">Compare</span><span class="tray__items" id="trayItems"></span><a class="btn btn--mint" id="trayGo" href="{% url 'shellwork:compare' %}">Compare</a><button class="btn" id="trayClear" type="button">Clear</button></aside>
+<footer class="foot"><div class="foot__cols"><div><b class="foot__h">Breeds</b><ul class="foot__list">{% for fb in sw_footer_breeds %}<li><a href="{{ fb.get_absolute_url }}">{{ fb.name }}</a></li>{% endfor %}</ul></div>
+<div><b class="foot__h">About Shellwork</b><p>A reference to chicken breeds by the eggs they lay. Figures come from The Livestock Conservancy, McMurray Hatchery, Koops Coops and peer-reviewed genetics papers, and each breed page lists its sources. Photos are openly licensed from Wikimedia Commons and credited where they appear. Egg colors on screen are approximate.</p>
+<p><a href="{% url 'shellwork:sources' %}">All sources</a> · <a href="{% url 'shellwork:glossary' %}">Glossary</a>{% if user.is_staff %} · <a href="{% url 'admin:index' %}">Admin</a>{% endif %}</p></div></div></footer>
+<script src="{% static 'shellwork/js/compare.js' %}" defer></script>
+{% block scripts %}{% endblock %}
+<script>if('serviceWorker' in navigator){addEventListener('load',()=>navigator.serviceWorker.register('{% url "shellwork:sw" %}',{scope:'{% url "shellwork:index" %}'}).catch(()=>{}))}</script>
+</body></html>
